@@ -14,7 +14,7 @@ A variável **Churn** será utilizada apenas para analisar os segmentos identifi
 
 *Defina os objetivos do projeto seguindo a lógica SMART (Específico, Mensurável, Atingível, Relevante e Temporal):*
 
-1. **Objetivo 1:** Aplicar e comparar técnicas de segmentação não supervisionada, nomeadamente **K-Prototypes**, **K-Means** e **Clustering Hierárquico Aglomerativo**, ao conjunto de dados **Telco Customer Churn**, utilizando variáveis demográficas, contratuais e de consumo, como antiguidade do cliente, tipo de contrato, serviços subscritos, método de pagamento, mensalidade e valor total pago, com o objetivo de identificar entre **3 e 5 perfis distintos de clientes** até ao dia **23/04/2026**.
+1. **Objetivo 1:** Aplicar e comparar técnicas de segmentação não supervisionada, nomeadamente **K-Prototypes**, **K-Means** e **Clustering Hierárquico Aglomerativo**, ao conjunto de dados **Telco Customer Churn**, utilizando variáveis demográficas, contratuais e de consumo, como antiguidade do cliente, tipo de contrato, serviços subscritos, método de pagamento, mensalidade e valor total pago, com o objetivo de identificar entre **3 e 5 perfis distintos de clientes** até ao fim do projeto.
 
    A qualidade dos segmentos será avaliada através de métricas como **Silhouette Score**, **Davies-Bouldin Index** e interpretação estatística dos grupos. O resultado esperado é selecionar a solução de segmentação mais adequada e identificar quais os perfis que apresentam **taxas de abandono superiores à média global do dataset**, de modo a apoiar recomendações de retenção direcionadas.
 
