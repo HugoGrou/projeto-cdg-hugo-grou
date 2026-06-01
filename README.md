@@ -2,7 +2,11 @@
 
 ## Identificação da Equipa
 
-* Hugo Grou (nº 2023137127)
+* **Grupo nº:** A preencher
+
+* **Membros:**
+
+  * Hugo Grou (nº de estudante a preencher)
 
 ## Organização do Repositório
 
@@ -16,7 +20,7 @@ A estrutura deste projeto segue boas práticas de Ciência de Dados e organizaç
 
 * **`docs/`**: Documentação técnica do projeto, organizada por *milestones*.
 
-  * **`M1_iniciacao.md`**: Definição do problema, objetivo, perguntas de investigação, planeamento e análise inicial dos dados.
+  * **`M1_iniciacao.md`**: Definição do problema, questão SMART, perguntas de investigação, planeamento e análise inicial dos dados.
 
   * **`M2_exploracao.md`**: Exploração dos dados, preparação e principais conclusões da análise exploratória.
 
@@ -44,13 +48,11 @@ O abandono de clientes é um problema relevante para empresas que prestam servi�
 
 Neste projeto, o objetivo não é construir um modelo de classificação supervisionada para prever individualmente se um cliente abandona ou não o serviço. Em vez disso, o trabalho será orientado para a análise exploratória e segmentação de clientes, com o objetivo de identificar perfis de clientes associados a maiores taxas de abandono.
 
-A variável **Churn** será utilizada apenas para analisar os segmentos identificados, permitindo calcular a taxa de abandono em cada grupo de clientes. Esta variável não será utilizada como variável alvo para treinar um modelo supervisionado.
+A variável `Churn` será utilizada apenas para analisar os segmentos identificados, permitindo calcular a taxa de abandono em cada grupo de clientes. Esta variável não será utilizada como variável alvo para treinar um modelo supervisionado.
 
-### Objetivos do Projeto
+### Questão SMART do Projeto
 
-* **Objetivo 1:** Aplicar e comparar técnicas de segmentação não supervisionada, nomeadamente *K-Prototypes*, *K-Means* e *Clustering Hierárquico Aglomerativo*, ao conjunto de dados **Telco Customer Churn**, utilizando variáveis demográficas, contratuais e de consumo, como antiguidade do cliente, tipo de contrato, serviços subscritos, método de pagamento, mensalidade e valor total pago, com o objetivo de identificar entre **3 e 5 perfis distintos de clientes** até ao dia **23/04/2026**.
-
-* **Objetivo 2:** Avaliar a qualidade dos segmentos através de métricas como *Silhouette Score*, *Davies-Bouldin Index* e interpretação estatística dos grupos, selecionando a solução de segmentação mais adequada e identificando quais os perfis que apresentam taxas de abandono superiores à média global do conjunto de dados.
+Até ao fim do projeto, em que medida a aplicação e comparação de técnicas de segmentação não supervisionada, nomeadamente *K-Prototypes*, *K-Means* e *Clustering Hierárquico Aglomerativo*, permite identificar entre **3 e 5 perfis distintos de clientes** no conjunto de dados **Telco Customer Churn**, com base em variáveis demográficas, contratuais e de consumo, avaliando a qualidade dos agrupamentos através do *Silhouette Score*, do *Davies-Bouldin Index* e da interpretação estatística dos segmentos, de forma a identificar perfis com taxas de abandono superiores à média global do dataset e apoiar recomendações de retenção direcionadas?
 
 ### Perguntas de Investigação
 
@@ -68,29 +70,57 @@ A variável **Churn** será utilizada apenas para analisar os segmentos identifi
 
 * **Dataset:** Telco Customer Churn
 
-* **Fonte:** https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+* **Fonte:** [Telco Customer Churn no Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 * **Dimensão:** 7043 linhas e 21 colunas
 
 * **Unidade de análise:** Cliente
 
-* **Variável de abandono:** Churn
+* **Variável de abandono:** `Churn`
+
+### Inspeção Inicial dos Dados
+
+Na inspeção inicial realizada no *Kaggle Code*, foi possível carregar o conjunto de dados e observar a sua estrutura geral.
+
+Foram analisados os seguintes aspetos:
+
+* dimensão do conjunto de dados;
+
+* primeiras linhas da tabela;
+
+* tipos de variáveis;
+
+* estatísticas descritivas;
+
+* existência de valores nulos;
+
+* existência de linhas duplicadas;
+
+* distribuição da variável `Churn`;
+
+* verificação inicial da coluna `TotalCharges`.
+
+A análise inicial indicou que o dataset contém **7043 linhas** e **21 colunas**. Não foram identificadas linhas duplicadas nem valores nulos diretamente através da verificação inicial. No entanto, foi observado que a coluna `TotalCharges` se encontra armazenada como variável categórica, apesar de representar valores monetários. Após uma conversão temporária para formato numérico, foram identificados **11 valores problemáticos**, que deverão ser tratados numa fase posterior.
+
+A variável `Churn` apresenta duas categorias. Na inspeção inicial, verificou-se que **5174 clientes permaneceram** no serviço e **1869 clientes abandonaram**.
 
 ## 2. Exploração (Milestone 2)
 
 ### Limpeza e Preparação
 
-Esta fase será desenvolvida na Milestone 2. Com base na inspeção inicial, prevê-se que seja necessário analisar e tratar a coluna **TotalCharges**, uma vez que esta se encontra inicialmente como variável categórica, apesar de representar valores monetários.
+Esta fase será desenvolvida na Milestone 2.
 
-Também será necessário preparar as variáveis para a análise exploratória e para a futura segmentação de clientes.
+Com base na inspeção inicial, prevê-se que seja necessário tratar a coluna `TotalCharges`, uma vez que esta se encontra inicialmente como variável categórica, apesar de representar valores monetários.
+
+Também será necessário preparar as variáveis demográficas, contratuais e de consumo para a análise exploratória e para a futura segmentação de clientes.
 
 Detalhes desta fase serão documentados em **`docs/M2_exploracao.md`**.
 
-### Principais Conclusões (EDA)
+### Principais Conclusões da Análise Exploratória
 
 A desenvolver na Milestone 2.
 
-Nesta fase serão analisadas as relações entre variáveis demográficas, contratuais e de consumo com a variável **Churn**, com recurso a tabelas, estatísticas descritivas e gráficos guardados na pasta **`reports/figures/`**.
+Nesta fase serão analisadas as relações entre variáveis demográficas, contratuais e de consumo com a variável `Churn`, recorrendo a tabelas, estatísticas descritivas e gráficos guardados na pasta **`reports/figures/`**.
 
 ## 3. Modelação (Milestone 3)
 
@@ -102,7 +132,9 @@ A fase de modelação será orientada para segmentação não supervisionada, e 
 
 * **Métricas previstas:** *Silhouette Score*, *Davies-Bouldin Index* e interpretação estatística dos segmentos.
 
-* **Resultado esperado:** Identificar entre 3 e 5 perfis distintos de clientes e analisar quais apresentam taxas de abandono superiores à média global do conjunto de dados.
+* **Resultado esperado:** Identificar entre **3 e 5 perfis distintos de clientes** e analisar quais apresentam taxas de abandono superiores à média global do conjunto de dados.
+
+A variável `Churn` será utilizada apenas após a criação dos segmentos, para analisar a taxa de abandono em cada perfil identificado.
 
 Detalhes desta fase serão documentados em **`docs/M3_modelacao.md`**.
 
@@ -114,7 +146,7 @@ A desenvolver na Milestone 4.
 
 Nesta fase será apresentada a interpretação final dos segmentos identificados, com especial atenção aos perfis de clientes que apresentem maiores taxas de abandono.
 
-### Recomendações de Inovação
+### Recomendações de Retenção
 
 A desenvolver na Milestone 4.
 
@@ -151,4 +183,3 @@ pip install -r requirements.txt
 ---
 
 *Data de última atualização: 01/06/2026*
-
