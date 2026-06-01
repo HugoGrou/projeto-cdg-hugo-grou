@@ -10,17 +10,25 @@ Neste projeto, o objetivo não é construir um modelo de classificação supervi
 
 A variável **Churn** será utilizada apenas para analisar os segmentos identificados, isto é, para calcular e interpretar a taxa de abandono em cada perfil de cliente. Esta variável não será utilizada como variável-alvo para treinar um modelo supervisionado.
 
-## 2. Objetivos SMART
+## 2. Objetivos SMART 
 
-*Defina os objetivos do projeto seguindo a lógica SMART (Específico, Mensurável, Atingível, Relevante e Temporal):*
-
-1. **Objetivo 1:** Aplicar e comparar técnicas de segmentação não supervisionada, nomeadamente **K-Prototypes**, **K-Means** e **Clustering Hierárquico Aglomerativo**, ao conjunto de dados **Telco Customer Churn**, utilizando variáveis demográficas, contratuais e de consumo, como antiguidade do cliente, tipo de contrato, serviços subscritos, método de pagamento, mensalidade e valor total pago, com o objetivo de identificar entre **3 e 5 perfis distintos de clientes** até ao fim do projeto.
-
-   A qualidade dos segmentos será avaliada através de métricas como **Silhouette Score**, **Davies-Bouldin Index** e interpretação estatística dos grupos. O resultado esperado é selecionar a solução de segmentação mais adequada e identificar quais os perfis que apresentam **taxas de abandono superiores à média global do dataset**, de modo a apoiar recomendações de retenção direcionadas.
+*O objetivo do projeto foi definido através de uma questão SMART, de forma a garantir que o trabalho é específico, mensurável, atingível, relevante e limitado no tempo.*
 
 ### Questão SMART
 
 Até ao fim do projeto, em que medida a aplicação e comparação de técnicas de segmentação não supervisionada, nomeadamente **K-Prototypes**, **K-Means** e **Clustering Hierárquico Aglomerativo**, permite identificar entre **3 e 5 perfis distintos de clientes** no conjunto de dados **Telco Customer Churn**, com base em variáveis demográficas, contratuais e de consumo, avaliando a qualidade dos agrupamentos através do **Silhouette Score**, do **Davies-Bouldin Index** e da interpretação estatística dos segmentos, de forma a identificar perfis com taxas de abandono superiores à média global do dataset e apoiar recomendações de retenção direcionadas?
+
+### Critérios SMART
+
+* **Específico:** O projeto centra-se na segmentação de clientes do conjunto de dados **Telco Customer Churn**, com foco na identificação de perfis associados a maiores taxas de abandono.
+
+* **Mensurável:** O resultado esperado consiste na identificação de **3 a 5 perfis distintos de clientes**, avaliados através de métricas como **Silhouette Score**, **Davies-Bouldin Index** e interpretação estatística dos segmentos.
+
+* **Atingível:** O dataset contém variáveis demográficas, contratuais e de consumo que permitem realizar análise exploratória e aplicar técnicas de segmentação não supervisionada.
+
+* **Relevante:** A identificação de perfis com taxas de abandono superiores à média global pode apoiar recomendações de retenção mais direcionadas.
+
+* **Temporal:** O objetivo deverá ser desenvolvido até ao fim do projeto, de acordo com o calendário definido para as diferentes milestones.
 
 ### Perguntas de Investigação
 
