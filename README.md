@@ -117,7 +117,7 @@ A inspeção inicial também mostrou que o conjunto de dados combina variáveis 
 | `MonthlyCharges`   | Numérica contínua                 | Pagamento           | Valor monetário mensal                                                         | Valor mensal cobrado ao cliente.                                                                                              | Variável de consumo e pagamento. Pode ser usada na segmentação.                                                  |
 | `TotalCharges`     | Numérica contínua após tratamento | Pagamento           | Valor monetário acumulado                                                      | Valor total cobrado ao cliente ao longo do tempo. Inicialmente encontra-se como variável categórica e necessita de conversão. | Variável de consumo e pagamento. Deverá ser tratada antes de ser usada na segmentação.                           |
 | `Churn`            | Categórica binária                | Resultado observado | Yes = abandonou, No = permaneceu                                               | Indica se o cliente abandonou ou permaneceu no serviço.                                                                       | Variável de referência para análise posterior dos segmentos. Não será usada como variável-alvo de classificação. |
-.
+
 
 ## 2. Exploração (Milestone 2)
 
