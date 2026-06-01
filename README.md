@@ -157,7 +157,7 @@ As recomendações serão propostas com base nas características dos segmentos 
 1. Clonar o repositório:
 
 ```bash
-git clone [url-do-repositorio]
+git clone https://github.com/HugoGrou/projeto-cdg-hugo-grou.git
 ```
 
 2. Instalar as dependências:
