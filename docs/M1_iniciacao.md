@@ -20,7 +20,7 @@ A variável **Churn** será utilizada apenas para analisar os segmentos identifi
 
 ### Questão SMART
 
-Até ao dia **23/04/2026**, em que medida a aplicação e comparação de técnicas de segmentação não supervisionada, nomeadamente **K-Prototypes**, **K-Means** e **Clustering Hierárquico Aglomerativo**, permite identificar entre **3 e 5 perfis distintos de clientes** no conjunto de dados **Telco Customer Churn**, com base em variáveis demográficas, contratuais e de consumo, avaliando a qualidade dos agrupamentos através do **Silhouette Score**, do **Davies-Bouldin Index** e da interpretação estatística dos segmentos, de forma a identificar perfis com taxas de abandono superiores à média global do dataset e apoiar recomendações de retenção direcionadas?
+Até ao fim do projeto, em que medida a aplicação e comparação de técnicas de segmentação não supervisionada, nomeadamente **K-Prototypes**, **K-Means** e **Clustering Hierárquico Aglomerativo**, permite identificar entre **3 e 5 perfis distintos de clientes** no conjunto de dados **Telco Customer Churn**, com base em variáveis demográficas, contratuais e de consumo, avaliando a qualidade dos agrupamentos através do **Silhouette Score**, do **Davies-Bouldin Index** e da interpretação estatística dos segmentos, de forma a identificar perfis com taxas de abandono superiores à média global do dataset e apoiar recomendações de retenção direcionadas?
 
 ### Perguntas de Investigação
 
@@ -62,12 +62,12 @@ Até ao dia **23/04/2026**, em que medida a aplicação e comparação de técni
 
 ## 5. Cronograma Interno
 
-| Fase            | Data Limite      | Entregável Esperado                                                                                                                                     |
-| :-------------- | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| M1: Iniciação   | 24/02/2026       | Repositório estruturado, README inicial, ficheiro `docs/M1_iniciacao.md` preenchido e notebook inicial no Kaggle com carregamento e inspeção dos dados. |
-| M2: Exploração  | Data a confirmar | Notebook de análise exploratória, tratamento inicial dos dados e documentação das principais decisões em `docs/M2_exploracao.md`.                       |
-| M3: Modelação   | 23/04/2026       | Aplicação e comparação de técnicas de segmentação não supervisionada, avaliação dos segmentos e documentação em `docs/M3_modelacao.md`.                 |
-| M4: Finalização | Data a confirmar | Interpretação final dos segmentos, recomendações de retenção, limitações do projeto e documentação em `docs/M4_conclusoes.md`.                          |
+| Fase            | Data Limite   | Entregável Esperado                                                                                                                                     |
+| :-------------- | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| M1: Iniciação   | 15-06-2026    | Repositório estruturado, README inicial, ficheiro `docs/M1_iniciacao.md` preenchido e notebook inicial no Kaggle com carregamento e inspeção dos dados. |
+| M2: Exploração  | 15-06-2026    | Notebook de análise exploratória, tratamento inicial dos dados e documentação das principais decisões em `docs/M2_exploracao.md`.                       |
+| M3: Modelação   | 15-06-2026    | Aplicação e comparação de técnicas de segmentação não supervisionada, avaliação dos segmentos e documentação em `docs/M3_modelacao.md`.                 |
+| M4: Finalização | 15-06-2026    | Interpretação final dos segmentos, recomendações de retenção, limitações do projeto e documentação em `docs/M4_conclusoes.md`.                          |
 
 ---
 
