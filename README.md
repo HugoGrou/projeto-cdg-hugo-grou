@@ -6,7 +6,7 @@
 
 ## Organização do Repositório
 
-A estrutura deste projeto segue boas práticas de Ciência de Dados e organização de projetos em *GitHub*.
+A estrutura deste projeto segue boas práticas de Ciência de Dados e organização de projetos em GitHub.
 
 * **`data/`**: Armazenamento dos dados do projeto.
 
@@ -14,7 +14,7 @@ A estrutura deste projeto segue boas práticas de Ciência de Dados e organizaç
 
   * **`data/processed/`**: Local destinado aos dados tratados em fases posteriores do projeto.
 
-* **`docs/`**: Documentação técnica do projeto, organizada por *milestones*.
+* **`docs/`**: Documentação técnica do projeto, organizada por milestones.
 
   * **`M1_iniciacao.md`**: Definição do problema, objetivo SMART, perguntas de investigação, planeamento e análise inicial dos dados.
 
@@ -24,7 +24,7 @@ A estrutura deste projeto segue boas práticas de Ciência de Dados e organizaç
 
   * **`M4_conclusoes.md`**: Interpretação final dos resultados, resposta ao objetivo SMART, recomendações e limitações do projeto.
 
-* **`notebooks/`**: Ficheiros desenvolvidos no *Kaggle Code* e exportados para o repositório.
+* **`notebooks/`**: Ficheiros desenvolvidos no Kaggle Code e exportados para o repositório.
 
 * **`src/`**: Código fonte modular, caso seja necessário criar funções reutilizáveis ao longo do projeto.
 
@@ -38,9 +38,9 @@ A estrutura deste projeto segue boas práticas de Ciência de Dados e organizaç
 
 ### Contexto e Problema de Negócio
 
-O presente projeto utiliza o conjunto de dados **Telco Customer Churn**, associado a clientes de uma empresa de telecomunicações.
+O presente projeto utiliza o conjunto de dados Telco Customer Churn, associado a clientes de uma empresa de telecomunicações.
 
-Apesar de o conjunto de dados incluir uma variável que identifica o abandono do serviço, o foco principal deste projeto não é construir um modelo de classificação nem prever individualmente se um cliente abandona ou permanece. O trabalho será orientado para a construção de um **modelo descritivo de segmentação de clientes**, com o objetivo de identificar grupos de clientes com características semelhantes.
+Apesar de o conjunto de dados incluir uma variável que identifica o abandono do serviço, o foco principal deste projeto não é construir um modelo de classificação nem prever individualmente se um cliente abandona ou permanece. O trabalho será orientado para a construção de um modelo descritivo de segmentação de clientes, com o objetivo de identificar grupos de clientes com características semelhantes.
 
 A segmentação de clientes é relevante para a gestão comercial, pois permite compreender melhor a composição da base de clientes, identificar perfis com características distintas e apoiar decisões relacionadas com comunicação, oferta de serviços, acompanhamento comercial e relacionamento com clientes.
 
@@ -50,7 +50,7 @@ Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clie
 
 ### Perguntas de Investigação
 
-1. Quais são as características demográficas, contratuais, de serviços subscritos e de consumo que melhor descrevem a heterogeneidade dos clientes no conjunto de dados **Telco Customer Churn**?
+1. Quais são as características demográficas, contratuais, de serviços subscritos e de consumo que melhor descrevem a heterogeneidade dos clientes no conjunto de dados Telco Customer Churn?
 
 2. Que perfis de clientes podem ser identificados no conjunto de dados e como se caracterizam estatisticamente em termos de antiguidade, mensalidade, valor total pago, tipo de contrato, método de pagamento e serviços subscritos?
 
@@ -68,23 +68,23 @@ Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clie
 
 ### Inspeção Inicial dos Dados
 
-A inspeção inicial foi realizada no *Kaggle Code*, com o objetivo de compreender a estrutura geral do conjunto de dados **Telco Customer Churn** antes de avançar para as fases de exploração, preparação e segmentação.
+A inspeção inicial foi realizada no Kaggle Code, com o objetivo de compreender a estrutura geral do conjunto de dados Telco Customer Churn antes de avançar para as fases de exploração, preparação e segmentação.
 
-O conjunto de dados contém **7043 observações** e **21 variáveis**. Cada observação representa um cliente e cada variável descreve uma característica associada ao cliente, ao contrato, aos serviços subscritos, ao método de pagamento ou aos valores pagos.
+O conjunto de dados contém 7043 observações e 21 variáveis. Cada observação representa um cliente e cada variável descreve uma característica associada ao cliente, ao contrato, aos serviços subscritos, ao método de pagamento ou aos valores pagos.
 
 Na visualização das primeiras linhas do conjunto de dados, observou-se que existem variáveis de diferentes naturezas. Algumas descrevem características demográficas dos clientes, como `gender`, `SeniorCitizen`, `Partner` e `Dependents`. Outras estão relacionadas com os serviços contratados, como `PhoneService`, `InternetService`, `OnlineSecurity`, `TechSupport`, `StreamingTV` e `StreamingMovies`. Existem ainda variáveis associadas ao contrato e ao pagamento, como `Contract`, `PaperlessBilling`, `PaymentMethod`, `MonthlyCharges` e `TotalCharges`.
 
 Relativamente aos tipos de dados, verificou-se que o conjunto de dados combina variáveis numéricas e categóricas. As variáveis `SeniorCitizen` e `tenure` surgem como valores inteiros, a variável `MonthlyCharges` surge como valor decimal e a maioria das restantes variáveis surge como categórica. A coluna `TotalCharges`, apesar de representar um valor monetário acumulado, surge inicialmente como variável categórica, pelo que necessita de tratamento posterior antes de poder ser utilizada como variável numérica.
 
-A análise estatística inicial das variáveis numéricas mostrou que a variável `tenure`, que representa a antiguidade do cliente em meses, varia entre **0** e **72 meses**, com média de aproximadamente **32,37 meses** e mediana de **29 meses**. A variável `MonthlyCharges`, que representa o valor mensal pago pelo cliente, varia entre **18,25** e **118,75**, com média de aproximadamente **64,76** e mediana de **70,35**. A variável `SeniorCitizen` apresenta valores **0** e **1**, sendo que a média aproximada de **0,16** indica que a maioria dos clientes não está identificada como cidadão sénior.
+A análise estatística inicial das variáveis numéricas mostrou que a variável `tenure`, que representa a antiguidade do cliente em meses, varia entre 0 e 72 meses, com média de aproximadamente 32,37 meses e mediana de 29 meses. A variável `MonthlyCharges`, que representa o valor mensal pago pelo cliente, varia entre 18,25 e 118,75, com média de aproximadamente 64,76 e mediana de 70,35. A variável `SeniorCitizen` apresenta valores 0 e 1, sendo que a média aproximada de 0,16 indica que a maioria dos clientes não está identificada como cidadão sénior.
 
-Na análise das variáveis categóricas, observou-se que `customerID` tem **7043 valores únicos**, confirmando que funciona como identificador técnico dos clientes. A variável `gender` apresenta duas categorias, sendo a categoria mais frequente **Male**, com **3555 ocorrências**. A variável `Contract` apresenta três categorias, sendo **Month-to-month** a mais frequente, com **3875 ocorrências**. A variável `InternetService` apresenta três categorias, sendo **Fiber optic** a mais frequente, com **3096 ocorrências**. A variável `PaymentMethod` apresenta quatro categorias, sendo **Electronic check** a mais frequente, com **2365 ocorrências**.
+Na análise das variáveis categóricas, observou-se que `customerID` tem 7043 valores únicos, confirmando que funciona como identificador técnico dos clientes. A variável `gender` apresenta duas categorias, sendo a categoria mais frequente `Male`, com 3555 ocorrências. A variável `Contract` apresenta três categorias, sendo Month-to-month a mais frequente, com 3875 ocorrências. A variável `InternetService` apresenta três categorias, sendo `Fiber optic` a mais frequente, com 3096 ocorrências. A variável `PaymentMethod` apresenta quatro categorias, sendo `Electronic check` a mais frequente, com 2365 ocorrências.
 
-A verificação de valores em falta indicou que não existem valores nulos diretamente identificados pelo método de verificação inicial. Também não foram encontradas linhas duplicadas, uma vez que o número de duplicados identificado foi **0**.
+A verificação de valores em falta indicou que não existem valores nulos diretamente identificados pelo método de verificação inicial. Também não foram encontradas linhas duplicadas, uma vez que o número de duplicados identificado foi 0.
 
-No entanto, foi identificado um problema específico na coluna `TotalCharges`. Embora esta coluna não apresente valores nulos diretos, a conversão temporária para formato numérico permitiu identificar **11 valores problemáticos**. Estes casos correspondem a registos em que o valor total pago não está preenchido de forma numérica. Observou-se também que estes registos têm `tenure` igual a **0**, o que sugere que correspondem a clientes sem antiguidade registada no serviço. Estes valores deverão ser tratados numa fase posterior de preparação dos dados.
+No entanto, foi identificado um problema específico na coluna `TotalCharges`. Embora esta coluna não apresente valores nulos diretos, a conversão temporária para formato numérico permitiu identificar 11 valores problemáticos. Estes casos correspondem a registos em que o valor total pago não está preenchido de forma numérica. Observou-se também que estes registos têm `tenure` igual a 0, o que sugere que correspondem a clientes sem antiguidade registada no serviço. Estes valores deverão ser tratados numa fase posterior de preparação dos dados.
 
-A variável `Churn` apresenta duas categorias: **No** e **Yes**. Na inspeção inicial, verificou-se que **5174 clientes** estão registados como **No**, correspondendo a aproximadamente **73,46%** do conjunto de dados, enquanto **1869 clientes** estão registados como **Yes**, correspondendo a aproximadamente **26,54%**. Esta variável existe no conjunto de dados, mas não constitui o foco principal do projeto, uma vez que o objetivo validado é construir um modelo descritivo de segmentação de clientes.
+A variável `Churn` apresenta duas categorias: **No** e **Yes**. Na inspeção inicial, verificou-se que 5174 clientes estão registados como **No**, correspondendo a aproximadamente 73,46% do conjunto de dados, enquanto 1869 clientes estão registados como **Yes**, correspondendo a aproximadamente 26,54%. Esta variável existe no conjunto de dados, mas não constitui o foco principal do projeto, uma vez que o objetivo validado é construir um modelo descritivo de segmentação de clientes.
 
 De forma geral, a inspeção inicial permitiu concluir que o conjunto de dados tem dimensão adequada para o desenvolvimento do projeto, não apresenta duplicados nem valores nulos diretos, mas requer tratamento específico da coluna `TotalCharges`. Também se confirmou que o conjunto de dados contém variáveis suficientes para caracterizar clientes em termos demográficos, contratuais, de serviços subscritos e de consumo, o que está alinhado com o objetivo SMART definido para o projeto.
 
