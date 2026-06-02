@@ -64,13 +64,16 @@ Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clie
 
 ## 5. Cronograma Interno
 
-| Fase            | Data Limite | Entregável Esperado                                                                                                                                     |
-| :-------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| M1: Iniciação   | 14/06/2026  | Repositório estruturado, README inicial, ficheiro `docs/M1_iniciacao.md` preenchido e notebook inicial no Kaggle com carregamento e inspeção dos dados. |
-| M2: Exploração  | 14/06/2026  | Notebook de análise exploratória, tratamento inicial dos dados e documentação das principais decisões em `docs/M2_exploracao.md`.                       |
-| M3: Modelação   | 14/06/2026  | Construção do modelo descritivo de segmentação, avaliação da solução obtida e caracterização estatística dos perfis de clientes.                        |
-| M4: Finalização | 14/06/2026  | Interpretação final dos perfis identificados, resposta ao objetivo SMART, recomendações de gestão comercial e documentação em `docs/M4_conclusoes.md`.  |
+| Fase | Data Limite | Entregável Esperado |
+| :--- | :--- | :--- |
+| M1: Iniciação | 14/06/2026 | Repositório estruturado, README inicial, ficheiro `docs/M1_iniciacao.md` preenchido e notebook inicial no Kaggle com carregamento e inspeção dos dados. |
+| M2: Exploração | 14/06/2026 | Notebook de análise exploratória, tratamento inicial dos dados e documentação das principais decisões em `docs/M2_exploracao.md`. |
+| M3: Modelação | 14/06/2026 | Construção do modelo descritivo de segmentação, avaliação da solução obtida e caracterização estatística dos perfis de clientes. |
+| M4: Finalização | 14/06/2026 | Interpretação final dos perfis identificados, resposta ao objetivo SMART, recomendações de gestão comercial e documentação em `docs/M4_conclusoes.md`. |
 
+---
+
+*Data de última atualização: 02/06/2026*
 ---
 
 *Data de última atualização: 02/06/2026*
