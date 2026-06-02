@@ -46,7 +46,7 @@ A segmentação de clientes é relevante para a gestão comercial, pois permite 
 
 ### Objetivo SMART
 
-Construir, até ao dia **23/04/2026**, um modelo descritivo de segmentação de clientes com base no conjunto de dados **Telco Customer Churn**, utilizando variáveis demográficas, contratuais, de serviços subscritos e de consumo, de modo a identificar **3 perfis de clientes estatisticamente caracterizáveis**, garantindo uma solução final com **Coeficiente de Silhueta médio igual ou superior a 0,24** e com cada perfil descrito através de pelo menos **cinco variáveis relevantes**, permitindo apoiar decisões de gestão comercial e relacionamento com clientes.
+Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clientes com base no conjunto de dados Telco Customer Churn, utilizando variáveis demográficas, contratuais, de serviços subscritos e de consumo, de modo a identificar 3 perfis de clientes estatisticamente caracterizáveis, garantindo uma solução final com Coeficiente de Silhueta médio igual ou superior a 0,24 e com cada perfil descrito através de pelo menos cinco variáveis relevantes, permitindo apoiar decisões de gestão comercial e relacionamento com clientes.
 
 ### Perguntas de Investigação
 
