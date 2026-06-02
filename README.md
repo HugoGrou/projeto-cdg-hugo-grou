@@ -68,31 +68,25 @@ Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clie
 
 ### Inspeção Inicial dos Dados
 
-A inspeção inicial foi realizada no *Kaggle Code*, com o objetivo de compreender a estrutura geral do conjunto de dados **Telco Customer Churn** antes de avançar para fases posteriores de exploração, preparação e segmentação.
+A inspeção inicial foi realizada no *Kaggle Code*, com o objetivo de compreender a estrutura geral do conjunto de dados **Telco Customer Churn** antes de avançar para as fases de exploração, preparação e segmentação.
 
-Nesta primeira análise foram observados os seguintes aspetos:
+O conjunto de dados contém **7043 observações** e **21 variáveis**. Cada observação representa um cliente e cada variável descreve uma característica associada ao cliente, ao contrato, aos serviços subscritos, ao método de pagamento ou aos valores pagos.
 
-* dimensão do conjunto de dados;
+Na visualização das primeiras linhas do conjunto de dados, observou-se que existem variáveis de diferentes naturezas. Algumas descrevem características demográficas dos clientes, como `gender`, `SeniorCitizen`, `Partner` e `Dependents`. Outras estão relacionadas com os serviços contratados, como `PhoneService`, `InternetService`, `OnlineSecurity`, `TechSupport`, `StreamingTV` e `StreamingMovies`. Existem ainda variáveis associadas ao contrato e ao pagamento, como `Contract`, `PaperlessBilling`, `PaymentMethod`, `MonthlyCharges` e `TotalCharges`.
 
-* primeiras linhas da tabela;
+Relativamente aos tipos de dados, verificou-se que o conjunto de dados combina variáveis numéricas e categóricas. As variáveis `SeniorCitizen` e `tenure` surgem como valores inteiros, a variável `MonthlyCharges` surge como valor decimal e a maioria das restantes variáveis surge como categórica. A coluna `TotalCharges`, apesar de representar um valor monetário acumulado, surge inicialmente como variável categórica, pelo que necessita de tratamento posterior antes de poder ser utilizada como variável numérica.
 
-* tipos de variáveis;
+A análise estatística inicial das variáveis numéricas mostrou que a variável `tenure`, que representa a antiguidade do cliente em meses, varia entre **0** e **72 meses**, com média de aproximadamente **32,37 meses** e mediana de **29 meses**. A variável `MonthlyCharges`, que representa o valor mensal pago pelo cliente, varia entre **18,25** e **118,75**, com média de aproximadamente **64,76** e mediana de **70,35**. A variável `SeniorCitizen` apresenta valores **0** e **1**, sendo que a média aproximada de **0,16** indica que a maioria dos clientes não está identificada como cidadão sénior.
 
-* estatísticas descritivas;
+Na análise das variáveis categóricas, observou-se que `customerID` tem **7043 valores únicos**, confirmando que funciona como identificador técnico dos clientes. A variável `gender` apresenta duas categorias, sendo a categoria mais frequente **Male**, com **3555 ocorrências**. A variável `Contract` apresenta três categorias, sendo **Month-to-month** a mais frequente, com **3875 ocorrências**. A variável `InternetService` apresenta três categorias, sendo **Fiber optic** a mais frequente, com **3096 ocorrências**. A variável `PaymentMethod` apresenta quatro categorias, sendo **Electronic check** a mais frequente, com **2365 ocorrências**.
 
-* existência de valores nulos;
+A verificação de valores em falta indicou que não existem valores nulos diretamente identificados pelo método de verificação inicial. Também não foram encontradas linhas duplicadas, uma vez que o número de duplicados identificado foi **0**.
 
-* existência de linhas duplicadas;
+No entanto, foi identificado um problema específico na coluna `TotalCharges`. Embora esta coluna não apresente valores nulos diretos, a conversão temporária para formato numérico permitiu identificar **11 valores problemáticos**. Estes casos correspondem a registos em que o valor total pago não está preenchido de forma numérica. Observou-se também que estes registos têm `tenure` igual a **0**, o que sugere que correspondem a clientes sem antiguidade registada no serviço. Estes valores deverão ser tratados numa fase posterior de preparação dos dados.
 
-* distribuição das principais variáveis;
+A variável `Churn` apresenta duas categorias: **No** e **Yes**. Na inspeção inicial, verificou-se que **5174 clientes** estão registados como **No**, correspondendo a aproximadamente **73,46%** do conjunto de dados, enquanto **1869 clientes** estão registados como **Yes**, correspondendo a aproximadamente **26,54%**. Esta variável existe no conjunto de dados, mas não constitui o foco principal do projeto, uma vez que o objetivo validado é construir um modelo descritivo de segmentação de clientes.
 
-* verificação inicial da coluna `TotalCharges`.
-
-O conjunto de dados contém **7043 linhas** e **21 colunas**. Cada linha representa um cliente e cada coluna representa uma característica associada ao cliente, ao contrato, aos serviços subscritos ou aos pagamentos.
-
-A análise inicial indicou que não existem linhas duplicadas. Também não foram identificados valores nulos diretamente através da verificação inicial de valores em falta. No entanto, foi identificado um problema na coluna `TotalCharges`: apesar de representar valores monetários, esta coluna encontra-se armazenada como variável categórica. Após uma conversão temporária para formato numérico, foram identificados **11 valores problemáticos**, que deverão ser tratados numa fase posterior de preparação dos dados.
-
-A inspeção inicial mostrou ainda que o conjunto de dados combina variáveis numéricas e categóricas. As variáveis numéricas principais são `tenure`, `MonthlyCharges` e `TotalCharges`, sendo que `TotalCharges` necessita de tratamento antes de poder ser utilizada como variável numérica. As restantes variáveis são maioritariamente categóricas e descrevem características demográficas, contratuais, serviços subscritos e métodos de pagamento.
+De forma geral, a inspeção inicial permitiu concluir que o conjunto de dados tem dimensão adequada para o desenvolvimento do projeto, não apresenta duplicados nem valores nulos diretos, mas requer tratamento específico da coluna `TotalCharges`. Também se confirmou que o conjunto de dados contém variáveis suficientes para caracterizar clientes em termos demográficos, contratuais, de serviços subscritos e de consumo, o que está alinhado com o objetivo SMART definido para o projeto.
 
 ### Dicionário das Variáveis
 
