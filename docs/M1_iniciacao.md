@@ -2,9 +2,9 @@
 
 ## 1. Descrição Detalhada do Problema
 
-O presente projeto utiliza o conjunto de dados **Telco Customer Churn**, disponível na plataforma Kaggle. Este conjunto de dados contém informação sobre clientes de uma empresa de telecomunicações, incluindo características demográficas, tipo de contrato, serviços subscritos, método de pagamento, antiguidade do cliente e valores pagos.
+O presente projeto utiliza o conjunto de dados Telco Customer Churn, disponível na plataforma Kaggle. Este conjunto de dados contém informação sobre clientes de uma empresa de telecomunicações, incluindo características demográficas, tipo de contrato, serviços subscritos, método de pagamento, antiguidade do cliente e valores pagos.
 
-Embora o conjunto de dados esteja associado ao tema de abandono de clientes, o objetivo principal deste projeto não é construir um modelo de classificação supervisionada nem prever individualmente se um cliente abandona ou permanece no serviço. O foco do trabalho será a construção de um **modelo descritivo de segmentação de clientes**, isto é, um modelo de agrupamento que permita identificar perfis de clientes com características semelhantes.
+Embora o conjunto de dados esteja associado ao tema de abandono de clientes, o objetivo principal deste projeto não é construir um modelo de classificação supervisionada nem prever individualmente se um cliente abandona ou permanece no serviço. O foco do trabalho será a construção de um modelo descritivo de segmentação de clientes, isto é, um modelo de agrupamento que permita identificar perfis de clientes com características semelhantes.
 
 A segmentação de clientes é relevante em contexto de gestão porque permite compreender melhor a composição da base de clientes. Ao identificar grupos com comportamentos, contratos, serviços e padrões de consumo semelhantes, a empresa pode apoiar decisões de gestão comercial, comunicação, acompanhamento e relacionamento com clientes.
 
@@ -16,19 +16,19 @@ Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clie
 
 ### Critérios SMART
 
-* **Específico:** O objetivo centra-se na construção de um modelo descritivo de segmentação de clientes, utilizando o conjunto de dados **Telco Customer Churn**.
+* **Específico:** O objetivo centra-se na construção de um modelo descritivo de segmentação de clientes, utilizando o conjunto de dados Telco Customer Churn.
 
-* **Mensurável:** O objetivo define como resultado esperado a identificação de **3 perfis de clientes**, uma solução com **Coeficiente de Silhueta médio igual ou superior a 0,24** e a descrição de cada perfil através de pelo menos **cinco variáveis relevantes**.
+* **Mensurável:** O objetivo define como resultado esperado a identificação de 3 perfis de clientes, uma solução com Coeficiente de Silhueta médio igual ou superior a 0,24 e a descrição de cada perfil através de pelo menos cinco variáveis relevantes.
 
 * **Atingível:** O conjunto de dados contém variáveis demográficas, contratuais, de serviços subscritos e de consumo suficientes para desenvolver uma análise de segmentação.
 
 * **Relevante:** A identificação de perfis de clientes pode apoiar decisões de gestão comercial e relacionamento com clientes.
 
-* **Temporal:** O objetivo deverá ser concretizado até ao dia **23/04/2026**.
+* **Temporal:** O objetivo deverá ser concretizado até ao dia 14/06/2026.
 
 ### Perguntas de Investigação
 
-1. Quais são as características demográficas, contratuais, de serviços subscritos e de consumo que melhor descrevem a heterogeneidade dos clientes no conjunto de dados **Telco Customer Churn**?
+1. Quais são as características demográficas, contratuais, de serviços subscritos e de consumo que melhor descrevem a heterogeneidade dos clientes no conjunto de dados Telco Customer Churn?
 
 2. Que perfis de clientes podem ser identificados no conjunto de dados e como se caracterizam estatisticamente em termos de antiguidade, mensalidade, valor total pago, tipo de contrato, método de pagamento e serviços subscritos?
 
@@ -36,9 +36,9 @@ Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clie
 
 ## 3. Metodologia de Gestão (PBL)
 
-* **Ferramentas de colaboração:** O projeto será desenvolvido com recurso ao **GitHub**, permitindo organizar o repositório, controlar versões e registar a evolução do trabalho através de mensagens de commit descritivas.
+* **Ferramentas de colaboração:** O projeto será desenvolvido com recurso ao GitHub, permitindo organizar o repositório, controlar versões e registar a evolução do trabalho através de mensagens de commit descritivas.
 
-* **Ambiente de desenvolvimento:** A exploração inicial dos dados será realizada no **Kaggle Code**, uma vez que o conjunto de dados está disponível na plataforma Kaggle. O notebook inicial será guardado no repositório GitHub, na pasta `notebooks/`.
+* **Ambiente de desenvolvimento:** A exploração inicial dos dados será realizada no Kaggle Code, uma vez que o conjunto de dados está disponível na plataforma Kaggle. O notebook inicial será guardado no repositório GitHub, na pasta `notebooks/`.
 
 * **Documentação:** A documentação será organizada na pasta `docs/`, com ficheiros Markdown correspondentes às diferentes fases do projeto. O ficheiro `M1_iniciacao.md` documenta a definição do problema, o objetivo SMART, as perguntas de investigação, a metodologia, a viabilidade dos dados e o cronograma.
 
@@ -48,15 +48,15 @@ Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clie
 
 ## 4. Análise de Viabilidade dos Dados
 
-* **Disponibilidade:** O conjunto de dados **Telco Customer Churn** está disponível no Kaggle. O dataset já foi associado a um notebook no Kaggle Code e foi possível carregar o ficheiro CSV com sucesso.
+* **Disponibilidade:** O conjunto de dados Telco Customer Churn está disponível no Kaggle. O dataset já foi associado a um notebook no Kaggle Code e foi possível carregar o ficheiro CSV com sucesso.
 
-* **Dimensão dos dados:** A inspeção inicial permitiu verificar que o conjunto de dados contém **7043 linhas** e **21 colunas**. Cada linha representa um cliente e cada coluna representa uma característica associada ao cliente, ao contrato, aos serviços subscritos ou aos pagamentos.
+* **Dimensão dos dados:** A inspeção inicial permitiu verificar que o conjunto de dados contém 7043 linhas e 21 colunas. Cada linha representa um cliente e cada coluna representa uma característica associada ao cliente, ao contrato, aos serviços subscritos ou aos pagamentos.
 
 * **Estrutura das variáveis:** O conjunto de dados combina variáveis numéricas e categóricas. As variáveis numéricas principais identificadas são `tenure`, `MonthlyCharges` e `TotalCharges`, embora `TotalCharges` esteja inicialmente armazenada como variável categórica e necessite de tratamento posterior. As restantes variáveis são maioritariamente categóricas e descrevem características demográficas, contratuais, serviços subscritos e métodos de pagamento.
 
-* **Qualidade inicial dos dados:** A verificação inicial indicou que não existem linhas duplicadas. Também não foram identificados valores nulos diretamente através da verificação inicial de valores em falta. No entanto, foi identificado um problema na coluna `TotalCharges`: apesar de representar valores monetários, esta coluna encontra-se armazenada como variável categórica. Após uma conversão temporária para formato numérico, foram identificados **11 valores problemáticos**, que deverão ser tratados numa fase posterior de preparação dos dados.
+* **Qualidade inicial dos dados:** A verificação inicial indicou que não existem linhas duplicadas. Também não foram identificados valores nulos diretamente através da verificação inicial de valores em falta. No entanto, foi identificado um problema na coluna `TotalCharges`: apesar de representar valores monetários, esta coluna encontra-se armazenada como variável categórica. Após uma conversão temporária para formato numérico, foram identificados 11 valores problemáticos, que deverão ser tratados numa fase posterior de preparação dos dados.
 
-* **Variável `Churn`:** A variável `Churn` existe no conjunto de dados e apresenta duas categorias: `Yes` e `No`. Na inspeção inicial, verificou-se que **5174 clientes** estão registados como `No` e **1869 clientes** estão registados como `Yes`. Esta variável não será utilizada como variável-alvo de classificação, uma vez que o objetivo validado é construir um modelo descritivo de segmentação de clientes.
+* **Variável `Churn`:** A variável `Churn` existe no conjunto de dados e apresenta duas categorias: `Yes` e `No`. Na inspeção inicial, verificou-se que 5174 clientes estão registados como `No` e 1869 clientes estão registados como `Yes`. Esta variável não será utilizada como variável-alvo de classificação, uma vez que o objetivo validado é construir um modelo descritivo de segmentação de clientes.
 
 * **Adequação ao objetivo SMART:** O conjunto de dados é adequado ao objetivo definido, pois contém variáveis suficientes para caracterizar clientes em diferentes dimensões: demográfica, contratual, serviços subscritos e consumo. Estas variáveis permitem construir e interpretar perfis de clientes, o que está alinhado com o objetivo de segmentação.
 
