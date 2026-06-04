@@ -6,7 +6,7 @@
 
 ## Organização do Repositório
 
-A estrutura deste projeto segue boas práticas de Ciência de Dados e organização de projetos em GitHub.
+A estrutura deste projeto segue boas práticas de Ciência de Dados e organização de projetos em *GitHub*.
 
 * **`data/`**: Armazenamento dos dados do projeto.
 
@@ -14,7 +14,7 @@ A estrutura deste projeto segue boas práticas de Ciência de Dados e organizaç
 
   * **`data/processed/`**: Local destinado aos dados tratados em fases posteriores do projeto.
 
-* **`docs/`**: Documentação técnica do projeto, organizada por milestones.
+* **`docs/`**: Documentação técnica do projeto, organizada por *milestones*.
 
   * **`M1_iniciacao.md`**: Definição do problema, objetivo SMART, perguntas de investigação, planeamento e análise inicial dos dados.
 
@@ -24,7 +24,7 @@ A estrutura deste projeto segue boas práticas de Ciência de Dados e organizaç
 
   * **`M4_conclusoes.md`**: Interpretação final dos resultados, resposta ao objetivo SMART, recomendações e limitações do projeto.
 
-* **`notebooks/`**: Ficheiros desenvolvidos no Kaggle Code e exportados para o repositório.
+* **`notebooks/`**: Ficheiros desenvolvidos no *Kaggle Code* e exportados para o repositório.
 
 * **`src/`**: Código fonte modular, caso seja necessário criar funções reutilizáveis ao longo do projeto.
 
@@ -38,19 +38,29 @@ A estrutura deste projeto segue boas práticas de Ciência de Dados e organizaç
 
 ### Contexto e Problema de Negócio
 
-O presente projeto utiliza o conjunto de dados Telco Customer Churn, associado a clientes de uma empresa de telecomunicações.
+O presente projeto utiliza o conjunto de dados **Telco Customer Churn**, associado a clientes de uma empresa de telecomunicações.
 
-Apesar de o conjunto de dados incluir uma variável que identifica o abandono do serviço, o foco principal deste projeto não é construir um modelo de classificação nem prever individualmente se um cliente abandona ou permanece. O trabalho será orientado para a construção de um modelo descritivo de segmentação de clientes, com o objetivo de identificar grupos de clientes com características semelhantes.
+Embora o conjunto de dados inclua uma variável que identifica o abandono do serviço, o objetivo principal deste projeto não é construir um modelo de classificação nem prever individualmente se um cliente abandona ou permanece. O foco do trabalho é a construção de um **modelo descritivo de segmentação de clientes**, orientado para identificar grupos de clientes com características semelhantes.
 
-A segmentação de clientes é relevante para a gestão comercial, pois permite compreender melhor a composição da base de clientes, identificar perfis com características distintas e apoiar decisões relacionadas com comunicação, oferta de serviços, acompanhamento comercial e relacionamento com clientes.
+A segmentação é útil porque permite deixar de observar a base de clientes como um conjunto homogéneo. Em vez de analisar todos os clientes da mesma forma, o projeto procura identificar perfis distintos a partir de características demográficas, contratuais, de serviços subscritos e de consumo. Esta abordagem pode apoiar decisões de gestão comercial, comunicação, acompanhamento e relacionamento com clientes.
+
+Assim, a utilidade do projeto não está apenas em criar grupos, mas em compreender **o que distingue cada grupo** e **como essa informação pode ser interpretada em contexto de gestão**.
+
+### Reflexão sobre a melhoria do trabalho
+
+Este projeto será desenvolvido com uma preocupação explícita de melhoria qualitativa. O objetivo não é apenas cumprir uma sequência de tarefas ou preencher os ficheiros pedidos, mas demonstrar uma evolução clara na forma como o trabalho é planeado, justificado e interpretado.
+
+Para isso, cada fase deverá responder ao objetivo SMART validado e às perguntas de investigação. A exploração dos dados deverá explicar por que motivo certas variáveis são relevantes para a segmentação. A preparação dos dados deverá justificar as decisões tomadas. A modelação deverá ser avaliada não apenas por métricas, mas também pela interpretabilidade dos perfis encontrados.
+
+Desta forma, o projeto procura evoluir de uma abordagem meramente técnica para uma abordagem mais analítica, em que o código, os gráficos e os relatórios estejam ligados a uma narrativa coerente de Ciência de Dados aplicada à gestão.
 
 ### Objetivo SMART
 
-Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clientes com base no conjunto de dados Telco Customer Churn, utilizando variáveis demográficas, contratuais, de serviços subscritos e de consumo, de modo a identificar 3 perfis de clientes estatisticamente caracterizáveis, garantindo uma solução final com Coeficiente de Silhueta médio igual ou superior a 0,24 e com cada perfil descrito através de pelo menos cinco variáveis relevantes, permitindo apoiar decisões de gestão comercial e relacionamento com clientes.
+Construir, até ao dia **14/06/2026**, um modelo descritivo de segmentação de clientes com base no conjunto de dados **Telco Customer Churn**, utilizando variáveis demográficas, contratuais, de serviços subscritos e de consumo, de modo a identificar **3 perfis de clientes estatisticamente caracterizáveis**, garantindo uma solução final com **Coeficiente de Silhueta médio igual ou superior a 0,24** e com cada perfil descrito através de pelo menos **cinco variáveis relevantes**, permitindo apoiar decisões de gestão comercial e relacionamento com clientes.
 
 ### Perguntas de Investigação
 
-1. Quais são as características demográficas, contratuais, de serviços subscritos e de consumo que melhor descrevem a heterogeneidade dos clientes no conjunto de dados Telco Customer Churn?
+1. Quais são as características demográficas, contratuais, de serviços subscritos e de consumo que melhor descrevem a heterogeneidade dos clientes no conjunto de dados **Telco Customer Churn**?
 
 2. Que perfis de clientes podem ser identificados no conjunto de dados e como se caracterizam estatisticamente em termos de antiguidade, mensalidade, valor total pago, tipo de contrato, método de pagamento e serviços subscritos?
 
@@ -68,95 +78,65 @@ Construir, até ao dia 14/06/2026, um modelo descritivo de segmentação de clie
 
 ### Inspeção Inicial dos Dados
 
-A inspeção inicial foi realizada no Kaggle Code, com o objetivo de compreender a estrutura geral do conjunto de dados Telco Customer Churn antes de avançar para as fases de exploração, preparação e segmentação.
+A inspeção inicial foi realizada no *Kaggle Code*, com o objetivo de compreender a estrutura geral do conjunto de dados **Telco Customer Churn** antes de avançar para as fases de exploração, preparação e segmentação.
 
-O conjunto de dados contém 7043 observações e 21 variáveis. Cada observação representa um cliente e cada variável descreve uma característica associada ao cliente, ao contrato, aos serviços subscritos, ao método de pagamento ou aos valores pagos.
+O conjunto de dados contém **7043 observações** e **21 variáveis**. Cada observação representa um cliente e cada variável descreve uma característica associada ao cliente, ao contrato, aos serviços subscritos, ao método de pagamento ou aos valores pagos.
 
 Na visualização das primeiras linhas do conjunto de dados, observou-se que existem variáveis de diferentes naturezas. Algumas descrevem características demográficas dos clientes, como `gender`, `SeniorCitizen`, `Partner` e `Dependents`. Outras estão relacionadas com os serviços contratados, como `PhoneService`, `InternetService`, `OnlineSecurity`, `TechSupport`, `StreamingTV` e `StreamingMovies`. Existem ainda variáveis associadas ao contrato e ao pagamento, como `Contract`, `PaperlessBilling`, `PaymentMethod`, `MonthlyCharges` e `TotalCharges`.
 
 Relativamente aos tipos de dados, verificou-se que o conjunto de dados combina variáveis numéricas e categóricas. As variáveis `SeniorCitizen` e `tenure` surgem como valores inteiros, a variável `MonthlyCharges` surge como valor decimal e a maioria das restantes variáveis surge como categórica. A coluna `TotalCharges`, apesar de representar um valor monetário acumulado, surge inicialmente como variável categórica, pelo que necessita de tratamento posterior antes de poder ser utilizada como variável numérica.
 
-A análise estatística inicial das variáveis numéricas mostrou que a variável `tenure`, que representa a antiguidade do cliente em meses, varia entre 0 e 72 meses, com média de aproximadamente 32,37 meses e mediana de 29 meses. A variável `MonthlyCharges`, que representa o valor mensal pago pelo cliente, varia entre 18,25 e 118,75, com média de aproximadamente 64,76 e mediana de 70,35. A variável `SeniorCitizen` apresenta valores 0 e 1, sendo que a média aproximada de 0,16 indica que a maioria dos clientes não está identificada como cidadão sénior.
+A análise estatística inicial das variáveis numéricas mostrou que a variável `tenure`, que representa a antiguidade do cliente em meses, varia entre **0** e **72 meses**, com média de aproximadamente **32,37 meses** e mediana de **29 meses**. Esta variável poderá ser importante para a segmentação, uma vez que a antiguidade pode distinguir clientes recentes de clientes com relação mais prolongada com a empresa.
 
-Na análise das variáveis categóricas, observou-se que `customerID` tem 7043 valores únicos, confirmando que funciona como identificador técnico dos clientes. A variável `gender` apresenta duas categorias, sendo a categoria mais frequente `Male`, com 3555 ocorrências. A variável `Contract` apresenta três categorias, sendo Month-to-month a mais frequente, com 3875 ocorrências. A variável `InternetService` apresenta três categorias, sendo `Fiber optic` a mais frequente, com 3096 ocorrências. A variável `PaymentMethod` apresenta quatro categorias, sendo `Electronic check` a mais frequente, com 2365 ocorrências.
+A variável `MonthlyCharges`, que representa o valor mensal pago pelo cliente, varia entre **18,25** e **118,75**, com média de aproximadamente **64,76** e mediana de **70,35**. Esta variável é relevante porque permite diferenciar clientes com níveis distintos de valor mensal associado aos serviços subscritos.
 
-A verificação de valores em falta indicou que não existem valores nulos diretamente identificados pelo método de verificação inicial. Também não foram encontradas linhas duplicadas, uma vez que o número de duplicados identificado foi 0.
+A variável `SeniorCitizen` apresenta valores **0** e **1**, sendo que a média aproximada de **0,16** indica que a maioria dos clientes não está identificada como cidadão sénior. Esta variável poderá ser usada na caracterização demográfica dos perfis, embora a sua relevância final dependa dos padrões encontrados durante a análise exploratória.
 
-No entanto, foi identificado um problema específico na coluna `TotalCharges`. Embora esta coluna não apresente valores nulos diretos, a conversão temporária para formato numérico permitiu identificar 11 valores problemáticos. Estes casos correspondem a registos em que o valor total pago não está preenchido de forma numérica. Observou-se também que estes registos têm `tenure` igual a 0, o que sugere que correspondem a clientes sem antiguidade registada no serviço. Estes valores deverão ser tratados numa fase posterior de preparação dos dados.
+Na análise das variáveis categóricas, observou-se que `customerID` tem **7043 valores únicos**, confirmando que funciona como identificador técnico dos clientes. Por esse motivo, esta variável não deverá ser usada na segmentação, pois não representa uma característica comportamental, contratual ou de consumo.
 
-A variável `Churn` apresenta duas categorias: **No** e **Yes**. Na inspeção inicial, verificou-se que 5174 clientes estão registados como **No**, correspondendo a aproximadamente 73,46% do conjunto de dados, enquanto 1869 clientes estão registados como **Yes**, correspondendo a aproximadamente 26,54%. Esta variável existe no conjunto de dados, mas não constitui o foco principal do projeto, uma vez que o objetivo validado é construir um modelo descritivo de segmentação de clientes.
+A variável `Contract` apresenta três categorias, sendo **Month-to-month** a mais frequente, com **3875 ocorrências**. A existência de diferentes tipos de contrato sugere que podem existir perfis de clientes com níveis distintos de compromisso contratual com a empresa. Por esse motivo, esta variável poderá ter relevância na diferenciação dos segmentos.
+
+A variável `InternetService` apresenta três categorias, sendo **Fiber optic** a mais frequente, com **3096 ocorrências**. Esta variável poderá ajudar a distinguir perfis de clientes com diferentes níveis de utilização de serviços digitais.
+
+A variável `PaymentMethod` apresenta quatro categorias, sendo **Electronic check** a mais frequente, com **2365 ocorrências**. O método de pagamento pode contribuir para a caracterização dos perfis, uma vez que reflete diferenças nos hábitos administrativos e na forma como os clientes interagem com a empresa.
+
+A verificação de valores em falta indicou que não existem valores nulos diretamente identificados pelo método de verificação inicial. Também não foram encontradas linhas duplicadas, uma vez que o número de duplicados identificado foi **0**.
+
+No entanto, foi identificado um problema específico na coluna `TotalCharges`. Embora esta coluna não apresente valores nulos diretos, a conversão temporária para formato numérico permitiu identificar **11 valores problemáticos**. Estes casos correspondem a registos em que o valor total pago não está preenchido de forma numérica. Observou-se também que estes registos têm `tenure` igual a **0**, o que sugere que correspondem a clientes sem antiguidade registada no serviço. Estes valores deverão ser tratados numa fase posterior de preparação dos dados.
+
+A variável `Churn` apresenta duas categorias: **No** e **Yes**. Na inspeção inicial, verificou-se que **5174 clientes** estão registados como **No**, correspondendo a aproximadamente **73,46%** do conjunto de dados, enquanto **1869 clientes** estão registados como **Yes**, correspondendo a aproximadamente **26,54%**. Esta variável existe no conjunto de dados, mas não constitui o foco principal do projeto, uma vez que o objetivo validado é construir um modelo descritivo de segmentação de clientes.
 
 De forma geral, a inspeção inicial permitiu concluir que o conjunto de dados tem dimensão adequada para o desenvolvimento do projeto, não apresenta duplicados nem valores nulos diretos, mas requer tratamento específico da coluna `TotalCharges`. Também se confirmou que o conjunto de dados contém variáveis suficientes para caracterizar clientes em termos demográficos, contratuais, de serviços subscritos e de consumo, o que está alinhado com o objetivo SMART definido para o projeto.
 
 ### Dicionário das Variáveis
 
-| Variável           | Tipo Estatístico                  | Domínio             | Classes / Escala Semântica                                                     | Definição Operacional                                                                                                         | Papel Analítico                                                                                                                     |
-| :----------------- | :-------------------------------- | :------------------ | :----------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| `customerID`       | Categórica nominal                | Identificador       | Código único por cliente                                                       | Identificador técnico de cada cliente no conjunto de dados.                                                                   | Variável identificadora. Não deverá ser usada na segmentação.                                                                       |
-| `gender`           | Categórica nominal binária        | Cliente             | Female, Male                                                                   | Género registado do cliente.                                                                                                  | Variável demográfica. Pode ser usada na caracterização dos perfis.                                                                  |
-| `SeniorCitizen`    | Categórica binária                | Cliente             | 0 = não sénior, 1 = sénior                                                     | Indica se o cliente é considerado cidadão sénior.                                                                             | Variável demográfica. Pode ser usada na segmentação e caracterização dos perfis.                                                    |
-| `Partner`          | Categórica binária                | Cliente             | Yes, No                                                                        | Indica se o cliente tem parceiro.                                                                                             | Variável demográfica. Pode ser usada na análise dos perfis de clientes.                                                             |
-| `Dependents`       | Categórica binária                | Cliente             | Yes, No                                                                        | Indica se o cliente tem dependentes.                                                                                          | Variável demográfica. Pode ser usada na análise dos perfis de clientes.                                                             |
-| `tenure`           | Numérica discreta                 | Contrato            | Número de meses                                                                | Número de meses em que o cliente permaneceu com a empresa.                                                                    | Variável contratual relevante para a segmentação.                                                                                   |
-| `PhoneService`     | Categórica binária                | Serviço             | Yes, No                                                                        | Indica se o cliente tem serviço telefónico.                                                                                   | Variável de serviços. Pode ser usada na segmentação.                                                                                |
-| `MultipleLines`    | Categórica nominal                | Serviço             | Yes, No, No phone service                                                      | Indica se o cliente tem múltiplas linhas telefónicas.                                                                         | Variável de serviços. Pode ajudar a caracterizar padrões de subscrição.                                                             |
-| `InternetService`  | Categórica nominal                | Serviço             | DSL, Fiber optic, No                                                           | Tipo de serviço de internet contratado pelo cliente.                                                                          | Variável de serviços. Pode ser usada na segmentação e caracterização dos perfis.                                                    |
-| `OnlineSecurity`   | Categórica nominal                | Serviço             | Yes, No, No internet service                                                   | Indica se o cliente tem serviço de segurança online.                                                                          | Variável de serviços. Pode ajudar a distinguir perfis de subscrição.                                                                |
-| `OnlineBackup`     | Categórica nominal                | Serviço             | Yes, No, No internet service                                                   | Indica se o cliente tem serviço de cópia de segurança online.                                                                 | Variável de serviços. Pode ser usada na caracterização dos perfis.                                                                  |
-| `DeviceProtection` | Categórica nominal                | Serviço             | Yes, No, No internet service                                                   | Indica se o cliente tem proteção de dispositivos.                                                                             | Variável de serviços. Pode ajudar a caracterizar os perfis de clientes.                                                             |
-| `TechSupport`      | Categórica nominal                | Serviço             | Yes, No, No internet service                                                   | Indica se o cliente tem suporte técnico contratado.                                                                           | Variável de serviços. Pode ser usada na caracterização dos perfis.                                                                  |
-| `StreamingTV`      | Categórica nominal                | Serviço             | Yes, No, No internet service                                                   | Indica se o cliente tem serviço de televisão por *streaming*.                                                                 | Variável de serviços. Pode ser usada na segmentação.                                                                                |
-| `StreamingMovies`  | Categórica nominal                | Serviço             | Yes, No, No internet service                                                   | Indica se o cliente tem serviço de filmes por *streaming*.                                                                    | Variável de serviços. Pode ser usada na segmentação.                                                                                |
-| `Contract`         | Categórica ordinal                | Contrato            | Month-to-month, One year, Two year                                             | Tipo de contrato do cliente.                                                                                                  | Variável contratual central para a caracterização dos perfis.                                                                       |
-| `PaperlessBilling` | Categórica binária                | Faturação           | Yes, No                                                                        | Indica se o cliente utiliza faturação sem papel.                                                                              | Variável contratual ou administrativa. Pode ser usada na caracterização dos perfis.                                                 |
-| `PaymentMethod`    | Categórica nominal                | Pagamento           | Electronic check, Mailed check, Bank transfer automatic, Credit card automatic | Método de pagamento utilizado pelo cliente.                                                                                   | Variável de pagamento relevante para segmentação e análise de perfis.                                                               |
-| `MonthlyCharges`   | Numérica contínua                 | Pagamento           | Valor monetário mensal                                                         | Valor mensal cobrado ao cliente.                                                                                              | Variável de consumo e pagamento. Pode ser usada na segmentação.                                                                     |
-| `TotalCharges`     | Numérica contínua após tratamento | Pagamento           | Valor monetário acumulado                                                      | Valor total cobrado ao cliente ao longo do tempo. Inicialmente encontra-se como variável categórica e necessita de conversão. | Variável de consumo e pagamento. Deverá ser tratada antes de ser usada na segmentação.                                              |
-| `Churn`            | Categórica binária                | Resultado observado | Yes = abandonou, No = permaneceu                                               | Indica se o cliente abandonou ou permaneceu no serviço.                                                                       | Variável presente no conjunto de dados. Não será utilizada como variável alvo de classificação nem como foco do objetivo principal. |
+O dicionário completo das variáveis encontra-se documentado em `docs/M1_iniciacao.md`. No *README*, apresenta-se uma síntese dos principais grupos de variáveis considerados no projeto.
 
-## 2. Exploração (*Milestone* 2)
+| Grupo de variáveis           | Variáveis principais                                                                                                                                      | Relevância para o projeto                                                                                                        |
+| :--------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| Identificação                | `customerID`                                                                                                                                              | Identifica tecnicamente cada cliente, mas não deverá ser usada na segmentação por não representar comportamento ou perfil.       |
+| Características demográficas | `gender`, `SeniorCitizen`, `Partner`, `Dependents`                                                                                                        | Permitem caracterizar os clientes e analisar se existem perfis demográficos distintos.                                           |
+| Antiguidade e contrato       | `tenure`, `Contract`, `PaperlessBilling`                                                                                                                  | Podem distinguir clientes recentes, clientes com maior permanência e clientes com diferentes níveis de compromisso contratual.   |
+| Serviços subscritos          | `PhoneService`, `MultipleLines`, `InternetService`, `OnlineSecurity`, `OnlineBackup`, `DeviceProtection`, `TechSupport`, `StreamingTV`, `StreamingMovies` | Permitem identificar padrões de utilização e combinações de serviços, sendo importantes para a construção dos perfis.            |
+| Pagamento e consumo          | `PaymentMethod`, `MonthlyCharges`, `TotalCharges`                                                                                                         | Permitem diferenciar clientes de acordo com método de pagamento, valor mensal e valor acumulado pago.                            |
+| Resultado observado          | `Churn`                                                                                                                                                   | Variável existente no conjunto de dados. Não será usada como variável alvo de classificação nem como foco do objetivo principal. |
 
+## 2. Exploração (Milestone 2)
 ### Limpeza e Preparação
-
-Esta fase será desenvolvida na *Milestone* 2.
-
-Com base na inspeção inicial, prevê-se que seja necessário tratar a coluna `TotalCharges`, uma vez que esta se encontra inicialmente como variável categórica, apesar de representar valores monetários.
-
-Também será necessário preparar as variáveis demográficas, contratuais, de serviços subscritos e de consumo para a análise exploratória e para a futura segmentação de clientes.
-
-Detalhes desta fase serão documentados em **`docs/M2_exploracao.md`**.
-
-### Principais Conclusões da Análise Exploratória
-
-A desenvolver na *Milestone* 2.
-
-Nesta fase serão analisadas as variáveis demográficas, contratuais, de serviços subscritos e de consumo, recorrendo a tabelas, estatísticas descritivas e gráficos guardados na pasta **`reports/figures/`**.
-
-## 3. Modelação (*Milestone* 3)
-
+* [Breve resumo das ações de limpeza tomadas. Detalhes em `docs/M2_exploracao.md`]
+### Principais Conclusões (EDA)
+> *Dica: Insere aqui o gráfico mais importante do projeto.*
+* **Ponto-chave:** [Ex: Identificámos que o fator X influencia em 40% o resultado Y, por aplicação
+do método ganho de informação]
+## 3. Modelação (Milestone 3)
 ### Abordagem Técnica
-
-A fase de modelação será orientada para a construção de um modelo descritivo de segmentação de clientes.
-
-O desenvolvimento técnico incluirá a preparação das variáveis, a aplicação de técnicas de agrupamento, a avaliação da qualidade da solução obtida e a caracterização estatística dos perfis identificados.
-
-A solução final deverá permitir identificar **3 perfis de clientes estatisticamente caracterizáveis**, apresentar um **Coeficiente de Silhueta médio igual ou superior a 0,24** e descrever cada perfil através de pelo menos **cinco variáveis relevantes**.
-
-Detalhes desta fase serão documentados em **`docs/M3_modelacao.md`**.
-
-## 4. Finalização (*Milestone* 4)
-
+* **Modelos:** [Ex: Random Forest e XGBoost]
+* **Métrica Principal:** [Ex: F1-Score ou RMSE]
+## 4. Finalização (Milestone 4)
 ### Resposta ao Problema
-
-A desenvolver na *Milestone* 4.
-
-Nesta fase será apresentada a interpretação final dos perfis de clientes identificados e a resposta ao objetivo SMART definido para o projeto.
-
-### Recomendações de Gestão Comercial
-
-A desenvolver na *Milestone* 4.
-
-As recomendações serão propostas com base nas características dos perfis de clientes identificados e terão como objetivo apoiar decisões de gestão comercial e relacionamento com clientes.
+[Resumo da solução e como ela gera valor para o negócio.]
+### Recomendações de Inovação
+1. [Sugestão prática baseada nos resultados] 
 
 ## Como Reproduzir este Projeto
 
@@ -175,6 +155,18 @@ pip install -r requirements.txt
 3. Abrir os ficheiros da pasta **`notebooks/`** seguindo a ordem numérica.
 
 4. Consultar a documentação de cada fase na pasta **`docs/`**.
+
+## Referências Técnicas
+
+* IBM. *Data Understanding Overview*. Disponível em: https://www.ibm.com/docs/en/spss-modeler/saas?topic=understanding-data-overview
+
+* *scikit-learn*. *Clustering*. Disponível em: https://scikit-learn.org/stable/modules/clustering.html
+
+* *scikit-learn*. *Silhouette Score*. Disponível em: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html
+
+* *scikit-learn*. *Davies-Bouldin Score*. Disponível em: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.davies_bouldin_score.html
+
+* *kmodes*. *K-Modes and K-Prototypes clustering*. Disponível em: https://pypi.org/project/kmodes/
 
 ## Informação Institucional
 
