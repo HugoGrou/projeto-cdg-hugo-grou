@@ -49,14 +49,14 @@ A variável `tenure` também apresentou dispersão considerável, refletindo a e
 
 As seguintes imagens devem ser guardadas na pasta `reports/figures/` e podem ser referenciadas neste documento:
 
-```markdown
+
 ![Histograma de tenure](../reports/figures/histograma_tenure.png)
 ![Histograma de MonthlyCharges](../reports/figures/histograma_MonthlyCharges.png)
 ![Histograma de TotalCharges](../reports/figures/histograma_TotalCharges.png)
 ![Boxplot de tenure](../reports/figures/boxplot_tenure.png)
 ![Boxplot de MonthlyCharges](../reports/figures/boxplot_MonthlyCharges.png)
 ![Boxplot de TotalCharges](../reports/figures/boxplot_TotalCharges.png)
-```
+
 
 ### 1.2. Frequência das variáveis categóricas
 
@@ -98,13 +98,13 @@ Foram destacados como mais relevantes para a segmentação os seguintes atributo
 
 Para não tornar o relatório demasiado extenso, recomenda-se destacar no GitHub apenas as figuras categóricas mais relevantes para o objetivo SMART:
 
-```markdown
+
 ![Frequência de Contract](../reports/figures/frequencia_Contract.png)
 ![Frequência de InternetService](../reports/figures/frequencia_InternetService.png)
 ![Frequência de PaymentMethod](../reports/figures/frequencia_PaymentMethod.png)
 ![Frequência de OnlineSecurity](../reports/figures/frequencia_OnlineSecurity.png)
 ![Frequência de TechSupport](../reports/figures/frequencia_TechSupport.png)
-```
+
 
 ---
 
@@ -141,14 +141,14 @@ A correlação entre `tenure` e `MonthlyCharges` foi mais baixa (0.2479), sugeri
 
 #### Figuras associadas
 
-```markdown
+
 ![Heatmap de correlação](../reports/figures/heatmap_correlacao_variaveis_numericas.png)
 ![Scatter tenure vs TotalCharges](../reports/figures/scatter_tenure_totalcharges.png)
 ![Scatter MonthlyCharges vs TotalCharges](../reports/figures/scatter_monthlycharges_totalcharges.png)
 ![Scatter tenure vs MonthlyCharges](../reports/figures/scatter_tenure_monthlycharges.png)
 ![Scatter tenure vs TotalCharges por Contract](../reports/figures/scatter_tenure_totalcharges_contract.png)
 ![Scatter MonthlyCharges vs TotalCharges por InternetService](../reports/figures/scatter_monthlycharges_totalcharges_internetservice.png)
-```
+
 
 ---
 
@@ -226,11 +226,11 @@ Não foram removidos registos por outliers. Esta decisão foi tomada porque:
 
 #### Figuras associadas
 
-```markdown
+
 ![Boxplot de outliers tenure](../reports/figures/boxplot_outliers_tenure.png)
 ![Boxplot de outliers MonthlyCharges](../reports/figures/boxplot_outliers_MonthlyCharges.png)
 ![Boxplot de outliers TotalCharges](../reports/figures/boxplot_outliers_TotalCharges.png)
-```
+
 
 ---
 
@@ -369,12 +369,12 @@ Os clientes com `Electronic check` apresentaram maior média de `AvgChargePerTen
 
 #### Figuras associadas
 
-```markdown 
+
 ![Heatmap novos atributos](../reports/figures/heatmap_novos_atributos_variaveis_criticas.png)
 ![ServiceCount vs MonthlyCharges](../reports/figures/scatter_servicecount_monthlycharges.png)
 ![AvgChargePerTenure vs MonthlyCharges](../reports/figures/scatter_avgchargepertenure_monthlycharges.png)
 ![ServiceCount por Contract](../reports/figures/boxplot_servicecount_contract.png)
-```
+
 
 ---
 
@@ -450,9 +450,9 @@ data/processed/atributos_removidos_m2.csv
 
 #### Figura associada
 
-```markdown
+
 ![Heatmap de feature selection](../reports/figures/heatmap_feature_selection_correlacao.png)
-```
+
 
 ---
 
