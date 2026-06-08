@@ -1,0 +1,10 @@
+Variável removida,Motivo
+AvgChargePerTenure,Correlação elevada
+MultipleLines_No phone service,Correlação elevada
+InternetService_No,Correlação elevada
+OnlineSecurity_No internet service,Correlação elevada
+OnlineBackup_No internet service,Correlação elevada
+DeviceProtection_No internet service,Correlação elevada
+TechSupport_No internet service,Correlação elevada
+StreamingTV_No internet service,Correlação elevada
+StreamingMovies_No internet service,Correlação elevada

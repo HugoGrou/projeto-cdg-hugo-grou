@@ -1,0 +1,25 @@
+Atributo final
+SeniorCitizen
+tenure
+MonthlyCharges
+TotalCharges
+ServiceCount
+HasInternetService
+gender_Male
+Partner_Yes
+Dependents_Yes
+Contract_One year
+Contract_Two year
+PaperlessBilling_Yes
+PaymentMethod_Credit card (automatic)
+PaymentMethod_Electronic check
+PaymentMethod_Mailed check
+PhoneService_Yes
+MultipleLines_Yes
+InternetService_Fiber optic
+OnlineSecurity_Yes
+OnlineBackup_Yes
+DeviceProtection_Yes
+TechSupport_Yes
+StreamingTV_Yes
+StreamingMovies_Yes
