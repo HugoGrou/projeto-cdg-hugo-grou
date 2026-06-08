@@ -369,7 +369,7 @@ Os clientes com `Electronic check` apresentaram maior média de `AvgChargePerTen
 
 #### Figuras associadas
 
-```markdown
+```markdown 
 ![Heatmap novos atributos](../reports/figures/heatmap_novos_atributos_variaveis_criticas.png)
 ![ServiceCount vs MonthlyCharges](../reports/figures/scatter_servicecount_monthlycharges.png)
 ![AvgChargePerTenure vs MonthlyCharges](../reports/figures/scatter_avgchargepertenure_monthlycharges.png)
