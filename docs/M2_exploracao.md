@@ -2,7 +2,7 @@
 
 > **Nota de Revisão:** Este documento pressupõe que o dataset já foi identificado e descrito no ficheiro `docs/M1_iniciacao.md`. Caso seja necessário consultar o significado original das variáveis, deve ser consultada essa Milestone. Nesta fase, o foco passa a ser a análise estatística, a qualidade dos dados, a limpeza, a engenharia de atributos e a preparação do dataset para a modelação.
 
-## 0. Enquadramento da Milestone 2
+## Enquadramento da Milestone 2
 
 A Milestone 2 corresponde às fases de **Exploratory Data Analysis (EDA)** e **Data Preparation** da metodologia CRISP-DM. O objetivo desta fase foi transformar a inspeção inicial feita na Milestone 1 numa análise mais profunda, com identificação de padrões, correção de problemas de qualidade dos dados e preparação do dataset para a fase de modelação.
 
