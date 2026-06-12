@@ -1,0 +1,5 @@
+,Silhouette,Silhouette,Davies_Bouldin,Davies_Bouldin,Calinski_Harabasz,Calinski_Harabasz,Min_Cluster_%,Min_Cluster_%
+,mean,std,mean,std,mean,std,mean,std
+Conjunto,,,,,,,,
+Teste,0.3946,0.0045,0.9615,0.0088,1426.0728,33.7727,29.362,1.976
+Treino,0.3954,0.0018,0.9612,0.0046,5713.3281,28.9531,29.372,0.6812

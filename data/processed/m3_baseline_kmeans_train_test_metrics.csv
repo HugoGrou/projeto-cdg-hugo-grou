@@ -1,0 +1,3 @@
+Conjunto,n_clusters,Silhouette Score,Davies-Bouldin Index,Calinski-Harabasz Score,Inércia
+Treino,3,0.2151,1.6238,2187.4128,25631.3821
+Teste,3,0.2194,1.586,547.2395,6431.563

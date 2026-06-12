@@ -1,0 +1,2 @@
+Modelo,n_clusters,init,n_init,max_iter,algorithm,random_state,N_Clusters,Ruido_%,Silhouette,Davies_Bouldin,Calinski_Harabasz,Inercia,Min_Cluster_%
+KMeans Otimizado,3,random,20,300,elkan,42,3,0.0,0.2161,1.6155,2734.0301,32059.3038,30.81

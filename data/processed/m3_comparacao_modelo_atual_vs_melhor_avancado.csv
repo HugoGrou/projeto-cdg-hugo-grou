@@ -1,0 +1,4 @@
+Cenario,Variante_Dados,Modelo,N_Clusters,Silhouette,Davies_Bouldin,Min_Cluster_%,Melhoria_Silhouette
+Modelo atual,Atual_M2,KMeans Otimizado,3,0.2161,1.6155,30.81,0.0
+Melhor modelo avançado,Numericas_Engenharia,GaussianMixture,2,0.4377,0.8396,31.55,0.2216
+Melhor avançado com 3 clusters,Numericas_Engenharia,GaussianMixture,3,0.3947,0.9626,29.62,0.1786

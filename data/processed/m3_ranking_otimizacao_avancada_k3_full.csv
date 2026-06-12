@@ -1,0 +1,9 @@
+Variante_Dados,Modelo,n_components,covariance_type,n_init,random_state,N_Clusters,Ruido_%,Silhouette,Davies_Bouldin,Calinski_Harabasz,Inercia,Min_Cluster_%,n_clusters,init,max_iter,algorithm,batch_size,threshold,branching_factor
+Numericas_Engenharia,GaussianMixture,3.0,spherical,5.0,42.0,3,0.0,0.3947,0.9626,7142.2309,,29.62,,,,,,,
+Numericas_Engenharia,KMeans,,,20.0,42.0,3,0.0,0.3946,0.9675,7173.2604,9982.1154,29.9,3.0,k-means++,300.0,lloyd,,,
+Numericas_Engenharia,KMeans,,,20.0,42.0,3,0.0,0.3946,0.9675,7173.2604,9982.1154,29.9,3.0,k-means++,500.0,lloyd,,,
+Numericas_Engenharia,KMeans,,,50.0,42.0,3,0.0,0.3945,0.9674,7173.285,9982.0832,29.92,3.0,k-means++,300.0,lloyd,,,
+Numericas_Engenharia,KMeans,,,50.0,42.0,3,0.0,0.3945,0.9674,7173.285,9982.0832,29.92,3.0,k-means++,500.0,lloyd,,,
+Numericas_Engenharia,MiniBatchKMeans,,,20.0,42.0,3,0.0,0.3939,0.9704,7164.0158,9999.1935,29.55,3.0,k-means++,300.0,,512.0,,
+Numericas_Engenharia,GaussianMixture,3.0,diag,5.0,42.0,3,0.0,0.3921,0.9304,6400.5935,,21.67,,,,,,,
+Numericas_Engenharia,MiniBatchKMeans,,,20.0,42.0,3,0.0,0.3919,0.9748,7158.959,10010.4931,29.67,3.0,k-means++,300.0,,2048.0,,

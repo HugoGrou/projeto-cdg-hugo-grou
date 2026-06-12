@@ -1,0 +1,87 @@
+Modelo,Conjunto,Tipo_Aplicacao,init,max_iter,n_clusters,n_init,random_state,N_Clusters,Ruido_%,Silhouette,Davies_Bouldin,Calinski_Harabasz,Inercia,Min_Cluster_%,batch_size,linkage,eps,min_samples
+KMeans,Treino,fit treino + predict teste,k-means++,300.0,3.0,10.0,42.0,3,0.0,0.2128,1.6238,2187.4128,25631.3821,30.88,,,,
+KMeans,Teste,fit treino + predict teste,k-means++,300.0,3.0,10.0,42.0,3,0.0,0.2194,1.586,547.2395,6431.563,30.09,,,,
+KMeans,Treino,fit treino + predict teste,k-means++,300.0,3.0,20.0,42.0,3,0.0,0.2128,1.6238,2187.4128,25631.3821,30.88,,,,
+KMeans,Teste,fit treino + predict teste,k-means++,300.0,3.0,20.0,42.0,3,0.0,0.2194,1.586,547.2395,6431.563,30.09,,,,
+KMeans,Treino,fit treino + predict teste,k-means++,300.0,4.0,10.0,42.0,4,0.0,0.1861,1.6656,1719.0109,23770.9072,14.34,,,,
+KMeans,Teste,fit treino + predict teste,k-means++,300.0,4.0,10.0,42.0,4,0.0,0.1901,1.615,431.3498,5957.1594,14.83,,,,
+KMeans,Treino,fit treino + predict teste,k-means++,300.0,4.0,20.0,42.0,4,0.0,0.1862,1.6659,1719.0175,23770.8632,14.34,,,,
+KMeans,Teste,fit treino + predict teste,k-means++,300.0,4.0,20.0,42.0,4,0.0,0.1901,1.615,431.3498,5957.0932,14.83,,,,
+KMeans,Treino,fit treino + predict teste,k-means++,300.0,5.0,10.0,42.0,5,0.0,0.1556,1.903,1482.6925,22177.9508,11.38,,,,
+KMeans,Teste,fit treino + predict teste,k-means++,300.0,5.0,10.0,42.0,5,0.0,0.1629,1.8329,376.4199,5529.0731,11.92,,,,
+KMeans,Treino,fit treino + predict teste,k-means++,300.0,5.0,20.0,42.0,5,0.0,0.1688,1.84,1482.7787,22177.3002,10.65,,,,
+KMeans,Teste,fit treino + predict teste,k-means++,300.0,5.0,20.0,42.0,5,0.0,0.1731,1.7774,375.8262,5531.0414,11.71,,,,
+KMeans,Treino,fit treino + predict teste,k-means++,300.0,6.0,10.0,42.0,6,0.0,0.1532,1.8665,1314.4945,21009.6197,9.96,,,,
+KMeans,Teste,fit treino + predict teste,k-means++,300.0,6.0,10.0,42.0,6,0.0,0.1611,1.8354,334.7049,5226.8552,11.0,,,,
+KMeans,Treino,fit treino + predict teste,k-means++,300.0,6.0,20.0,42.0,6,0.0,0.1532,1.8665,1314.4945,21009.6197,9.96,,,,
+KMeans,Teste,fit treino + predict teste,k-means++,300.0,6.0,20.0,42.0,6,0.0,0.1611,1.8354,334.7049,5226.8552,11.0,,,,
+MiniBatchKMeans,Treino,fit treino + predict teste,k-means++,300.0,3.0,10.0,42.0,3,0.0,0.2127,1.6257,2186.5037,25642.463,31.22,512.0,,,
+MiniBatchKMeans,Teste,fit treino + predict teste,k-means++,300.0,3.0,10.0,42.0,3,0.0,0.2188,1.5926,546.784,6435.0061,30.38,512.0,,,
+MiniBatchKMeans,Treino,fit treino + predict teste,k-means++,300.0,4.0,10.0,42.0,4,0.0,0.1865,1.6621,1718.225,23784.9089,13.51,512.0,,,
+MiniBatchKMeans,Teste,fit treino + predict teste,k-means++,300.0,4.0,10.0,42.0,4,0.0,0.1907,1.6106,431.6223,5956.0594,13.84,512.0,,,
+MiniBatchKMeans,Treino,fit treino + predict teste,k-means++,300.0,5.0,10.0,42.0,5,0.0,0.1483,1.978,1465.9917,22344.9191,13.35,512.0,,,
+MiniBatchKMeans,Teste,fit treino + predict teste,k-means++,300.0,5.0,10.0,42.0,5,0.0,0.1556,1.9221,370.4367,5596.3391,13.7,512.0,,,
+MiniBatchKMeans,Treino,fit treino + predict teste,k-means++,300.0,6.0,10.0,42.0,6,0.0,0.1493,1.8935,1309.008,21070.7093,9.82,512.0,,,
+MiniBatchKMeans,Teste,fit treino + predict teste,k-means++,300.0,6.0,10.0,42.0,6,0.0,0.1576,1.8669,336.8277,5214.0614,11.0,512.0,,,
+MiniBatchKMeans,Treino,fit treino + predict teste,k-means++,300.0,3.0,10.0,42.0,3,0.0,0.2128,1.6244,2187.2586,25638.7525,30.94,1024.0,,,
+MiniBatchKMeans,Teste,fit treino + predict teste,k-means++,300.0,3.0,10.0,42.0,3,0.0,0.2191,1.5888,547.126,6435.0907,30.23,1024.0,,,
+MiniBatchKMeans,Treino,fit treino + predict teste,k-means++,300.0,4.0,10.0,42.0,4,0.0,0.1718,1.9832,1704.556,23881.8564,22.36,1024.0,,,
+MiniBatchKMeans,Teste,fit treino + predict teste,k-means++,300.0,4.0,10.0,42.0,4,0.0,0.1767,1.9654,426.7375,5989.7371,21.5,1024.0,,,
+MiniBatchKMeans,Treino,fit treino + predict teste,k-means++,300.0,5.0,10.0,42.0,5,0.0,0.1442,2.199,1416.7797,22741.007,17.91,1024.0,,,
+MiniBatchKMeans,Teste,fit treino + predict teste,k-means++,300.0,5.0,10.0,42.0,5,0.0,0.1485,2.1825,355.2314,5708.5684,17.74,1024.0,,,
+MiniBatchKMeans,Treino,fit treino + predict teste,k-means++,300.0,6.0,10.0,42.0,6,0.0,0.1385,2.1286,1244.4956,21674.6155,12.6,1024.0,,,
+MiniBatchKMeans,Teste,fit treino + predict teste,k-means++,300.0,6.0,10.0,42.0,6,0.0,0.1413,2.0855,309.4473,5456.0603,12.92,1024.0,,,
+Agglomerative,Treino,fit separado no teste,,,3.0,,,3,0.0,0.188,1.5817,1781.8019,,21.6,,ward,,
+Agglomerative,Teste,fit separado no teste,,,3.0,,,3,0.0,0.1985,1.5448,469.4592,,22.14,,ward,,
+Agglomerative,Treino,fit separado no teste,,,4.0,,,4,0.0,0.1661,1.9604,1523.3187,,17.45,,ward,,
+Agglomerative,Teste,fit separado no teste,,,4.0,,,4,0.0,0.1638,1.9758,378.5265,,12.99,,ward,,
+Agglomerative,Treino,fit separado no teste,,,5.0,,,5,0.0,0.1411,2.081,1312.522,,15.39,,ward,,
+Agglomerative,Teste,fit separado no teste,,,5.0,,,5,0.0,0.1421,2.1054,335.0151,,12.99,,ward,,
+Agglomerative,Treino,fit separado no teste,,,6.0,,,6,0.0,0.1307,1.9923,1148.8305,,6.69,,ward,,
+Agglomerative,Teste,fit separado no teste,,,6.0,,,6,0.0,0.1305,2.0,296.859,,8.73,,ward,,
+Agglomerative,Treino,fit separado no teste,,,3.0,,,3,0.0,0.1892,1.7646,1997.3109,,27.17,,complete,,
+Agglomerative,Teste,fit separado no teste,,,3.0,,,3,0.0,0.1652,1.6002,414.4924,,13.98,,complete,,
+Agglomerative,Treino,fit separado no teste,,,4.0,,,4,0.0,0.1625,2.0595,1523.2005,,8.45,,complete,,
+Agglomerative,Teste,fit separado no teste,,,4.0,,,4,0.0,0.1421,2.1353,358.9029,,13.98,,complete,,
+Agglomerative,Treino,fit separado no teste,,,5.0,,,5,0.0,0.1299,2.5283,1190.236,,5.89,,complete,,
+Agglomerative,Teste,fit separado no teste,,,5.0,,,5,0.0,0.1118,2.4177,301.3986,,13.98,,complete,,
+Agglomerative,Treino,fit separado no teste,,,6.0,,,6,0.0,0.1298,2.8065,1007.3198,,5.89,,complete,,
+Agglomerative,Teste,fit separado no teste,,,6.0,,,6,0.0,0.1077,2.7725,248.4171,,4.9,,complete,,
+Agglomerative,Treino,fit separado no teste,,,3.0,,,3,0.0,0.1569,1.9664,1384.3079,,7.54,,average,,
+Agglomerative,Teste,fit separado no teste,,,3.0,,,3,0.0,0.2025,1.5544,487.8959,,25.34,,average,,
+Agglomerative,Treino,fit separado no teste,,,4.0,,,4,0.0,0.1718,1.8271,1504.9924,,7.54,,average,,
+Agglomerative,Teste,fit separado no teste,,,4.0,,,4,0.0,0.1772,1.8191,387.0049,,12.49,,average,,
+Agglomerative,Treino,fit separado no teste,,,5.0,,,5,0.0,0.1466,2.1635,1187.3013,,3.76,,average,,
+Agglomerative,Teste,fit separado no teste,,,5.0,,,5,0.0,0.1598,2.1056,302.4908,,2.84,,average,,
+Agglomerative,Treino,fit separado no teste,,,6.0,,,6,0.0,0.137,2.401,1013.6943,,3.76,,average,,
+Agglomerative,Teste,fit separado no teste,,,6.0,,,6,0.0,0.1465,2.0219,244.7996,,0.5,,average,,
+DBSCAN,Treino,fit separado no teste,,,,,,11,24.94,-0.1635,1.5943,4.196,,0.07,,,1.5,5.0
+DBSCAN,Teste,fit separado no teste,,,,,,5,45.71,-0.1557,1.3298,6.4956,,0.21,,,1.5,5.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,34.58,,,,,,,,1.5,10.0
+DBSCAN,Teste,fit separado no teste,,,,,,3,54.72,0.4424,1.3873,105.5609,,0.85,,,1.5,10.0
+DBSCAN,Treino,fit separado no teste,,,,,,2,43.57,0.4155,0.7849,1093.1246,,4.76,,,1.5,20.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,65.65,,,,,,,,1.5,20.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.2,,,,,,,,2.0,5.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,6.03,,,,,,,,2.0,5.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.6,,,,,,,,2.0,10.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,11.85,,,,,,,,2.0,10.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,3.57,,,,,,,,2.0,20.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,24.77,,,,,,,,2.0,20.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,2.5,5.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,2.5,5.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,2.5,10.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,2.5,10.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,2.5,20.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,2.5,20.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,3.0,5.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,3.0,5.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,3.0,10.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,3.0,10.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,3.0,20.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,3.0,20.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,3.5,5.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,3.5,5.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,3.5,10.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,3.5,10.0
+DBSCAN,Treino,fit separado no teste,,,,,,1,0.0,,,,,,,,3.5,20.0
+DBSCAN,Teste,fit separado no teste,,,,,,1,0.0,,,,,,,,3.5,20.0

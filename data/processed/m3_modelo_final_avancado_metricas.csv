@@ -1,0 +1,2 @@
+Variante_Dados,Modelo,n_components,covariance_type,n_init,random_state,N_Clusters,Ruido_%,Silhouette,Davies_Bouldin,Calinski_Harabasz,Inercia,Min_Cluster_%
+Numericas_Engenharia,GaussianMixture,3,spherical,5,42,3,0.0,0.3947,0.9626,7142.2309,,29.62

@@ -1,0 +1,2 @@
+n_clusters,Silhouette Score,Davies-Bouldin Index,Calinski-Harabasz Score,Inércia
+3,0.2161,1.6154,2734.0298,32059.2893
