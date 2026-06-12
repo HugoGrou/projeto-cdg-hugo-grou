@@ -222,4 +222,4 @@ docs/M4_conclusoes.md
 **Instituição:** Coimbra Business School | ISCAC
 **Curso:** Licenciatura em Ciência de Dados para a Gestão
 **Unidade Curricular:** Projeto em Ciência de Dados
-**Professor Responsável:** Dora Melo
+**Professor Responsável:** Dora Melo (dmelo@iscac.pt)
