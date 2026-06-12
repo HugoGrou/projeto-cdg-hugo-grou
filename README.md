@@ -2,10 +2,9 @@
 
 ## Identificação da Equipa
 
-* **Grupo nº:** por preencher
 * **Membros:**
 
-  * Hugo Grou - nº de estudante por preencher
+  * Hugo Grou - 2023137127
 
 ## Organização do Repositório
 
