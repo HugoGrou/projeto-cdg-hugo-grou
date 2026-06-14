@@ -1,9 +1,5 @@
 # Q&A — Perguntas Frequentes sobre o Projeto
 
-## Projeto: Segmentação de Clientes Telco Customer Churn
-
-Este ficheiro reúne perguntas e respostas técnicas que podem ser usadas na preparação do pitch final e na defesa do projeto. O objetivo é antecipar dúvidas sobre a metodologia, o modelo final, as métricas, as limitações e o valor prático da solução.
-
 ---
 
 ## 1. Porque é que o projeto não usou `Churn` como variável-alvo?
@@ -50,7 +46,6 @@ A configuração final obteve:
 | Calinski-Harabasz Score | 7142,2309 |
 | Cluster mínimo          |    29,62% |
 
-Estes valores devem ser atualizados caso mudem após uma execução final completa do notebook.
 
 ---
 
