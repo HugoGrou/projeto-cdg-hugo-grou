@@ -166,52 +166,9 @@ Mais detalhes estão disponíveis em [`docs/M4_conclusoes.md`](docs/M4_conclusoe
 
 ## Como Reproduzir este Projeto
 
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/HugoGrou/projeto-cdg-hugo-grou.git
-cd projeto-cdg-hugo-grou
-```
-
-2. Instale as dependências:
-
-```bash
-pip install -r requirements.txt
-```
-
+1. Clone o repositório: `git clone https://github.com/HugoGrou/projeto-cdg-hugo-grou.git`
+2. Instale as dependências: `pip install -r requirements.txt`
 3. Execute os notebooks na pasta `notebooks/` seguindo a ordem numérica.
-
-> **Nota:** Confirmar no GitHub os nomes exatos dos notebooks antes da entrega final. No planeamento da UC, os notebooks devem estar organizados por fase do projeto.
-
-Exemplo de organização esperada:
-
-```text
-notebooks/
-├── 1.0_eda_limpeza.ipynb
-├── 2.0_modelacao_treino.ipynb
-└── 3.0_interpretacao.ipynb
-```
-
-4. Consulte a documentação técnica na pasta `docs/`:
-
-```text
-docs/M1_iniciacao.md
-docs/M2_exploracao.md
-docs/M3_modelacao.md
-docs/M4_conclusoes.md
-```
-
-5. Consulte as figuras principais em:
-
-```text
-reports/figures/
-```
-
-6. Consulte o ficheiro de apoio à defesa final:
-
-```text
-Q&A.md
-```
 
 **Instituição:** Coimbra Business School | ISCAC
 **Curso:** Licenciatura em Ciência de Dados para a Gestão
