@@ -1,5 +1,16 @@
 # Análise e Segmentação de Clientes — Telco Customer Churn
 
+## Resumo
+
+As empresas de telecomunicações lidam com bases de clientes cada vez mais heterogéneas, compostas por pessoas com diferentes níveis de consumo, antiguidade, serviços subscritos e formas de relacionamento contratual. Tratar todos os clientes da mesma forma pode limitar a eficácia das decisões comerciais, uma vez que clientes com perfis diferentes podem exigir estratégias distintas de comunicação, fidelização e acompanhamento.
+
+Este projeto propõe uma abordagem descritiva para compreender melhor essa diversidade através da segmentação de clientes. Recorrendo ao dataset **Telco Customer Churn**, que contém 7043 registos e 21 variáveis relacionadas com informação demográfica, contratual, serviços subscritos e valores pagos, foi desenvolvida uma solução de **clustering não supervisionado** para identificar perfis de clientes com características semelhantes.
+
+Apesar de o dataset incluir a variável `Churn`, esta não foi utilizada como variável-alvo, porque o objetivo do projeto não é prever abandono, mas sim construir conhecimento sobre a estrutura da base de clientes. A metodologia seguida baseia-se no ciclo **CRISP-DM**, passando pelas fases de compreensão do problema, análise exploratória, preparação dos dados, modelação, avaliação e interpretação dos resultados.
+
+O modelo final selecionado foi o **Gaussian Mixture Model com 3 clusters**, obtendo um **Coeficiente de Silhueta de 0,3947**, acima do mínimo de 0,24 definido no objetivo SMART. A solução permitiu identificar três perfis principais: clientes com baixo consumo e menor utilização de serviços, clientes antigos com maior consumo e maior subscrição de serviços, e clientes recentes com encargos mensais elevados. Estes perfis podem apoiar decisões de gestão comercial e relacionamento com clientes, permitindo adaptar estratégias a cada segmento identificado.
+
+
 ## Identificação da Equipa
 
 * **Membros:**
@@ -50,7 +61,7 @@ O desafio principal consiste em identificar grupos de clientes com característi
 
 ### Limpeza e Preparação
 
-Na Milestone 2 foi realizada a análise exploratória e a preparação dos dados para a fase de modelação.
+Na Milestone 2 foi realizada a análise exploratória e a preparação dos dados para a fase de modelação. Esta etapa teve como objetivo compreender a estrutura do dataset, identificar problemas de qualidade dos dados e preparar uma versão adequada para a aplicação de algoritmos de clustering.
 
 As principais tarefas realizadas foram:
 
@@ -85,86 +96,35 @@ A análise exploratória permitiu identificar diferenças relevantes entre clien
 
 Estas variáveis foram consideradas importantes para a construção dos perfis de clientes, uma vez que ajudam a distinguir clientes com diferentes níveis de consumo, permanência e envolvimento com os serviços da empresa.
 
-* **Ponto-chave:** A preparação dos dados confirmou que existiam variáveis suficientes para avançar para uma abordagem de segmentação não supervisionada, desde que a variável `Churn` fosse excluída da modelação.
+### Gráfico Principal da Exploração
+
+![Matriz de Correlação das Variáveis Numéricas](reports/figures/heatmap_correlacao_variaveis_numericas.png)
+
+A matriz de correlação permitiu observar relações importantes entre as variáveis numéricas do dataset. Destaca-se a correlação forte entre `tenure` e `TotalCharges` (`0,83`), indicando que clientes com maior tempo de permanência tendem a acumular maior valor pago. Também existe uma correlação positiva entre `MonthlyCharges` e `TotalCharges` (`0,65`), mostrando a relevância destas variáveis para distinguir diferentes perfis de clientes.
+
+* **Ponto-chave:** A exploração confirmou que `tenure`, `MonthlyCharges` e `TotalCharges` eram variáveis relevantes para preparar a segmentação não supervisionada.
 
 ## 3. Modelação (Milestone 3)
 
 ### Abordagem Técnica
 
-Na Milestone 3 foi adotada uma abordagem de **clustering não supervisionado**, com o objetivo de identificar **3 perfis de clientes**.
+Na Milestone 3 foi aplicada uma abordagem de **clustering não supervisionado**, com o objetivo de identificar **3 perfis de clientes** a partir das variáveis preparadas na fase anterior.
 
-* **Modelos testados:** K-Means, MiniBatch K-Means, Agglomerative Clustering, DBSCAN, Bisecting K-Means, BIRCH e Gaussian Mixture Models.
-* **Métrica principal:** Silhouette Score.
-* **Métricas complementares:** Davies-Bouldin Index, Calinski-Harabasz Score, Inércia e percentagem mínima por cluster.
+A variável `Churn` não foi usada como variável-alvo, uma vez que o projeto não pretende prever abandono, mas sim compreender a estrutura natural da base de clientes.
 
-A variável `Churn` não foi usada como variável-alvo. O foco foi avaliar a estrutura natural dos dados e identificar grupos de clientes com características semelhantes.
+Foram testados vários algoritmos de agrupamento, incluindo K-Means, MiniBatch K-Means, Agglomerative Clustering, DBSCAN, Bisecting K-Means, BIRCH e Gaussian Mixture Models. A métrica principal usada para avaliar a qualidade dos agrupamentos foi o **Silhouette Score**, complementada pelo Davies-Bouldin Index, Calinski-Harabasz Score e pela análise da dimensão dos clusters.
 
-#### Baseline
+O modelo baseline foi o **K-Means com 3 clusters**, que obteve uma Silhouette de **0,2161**, ficando abaixo do mínimo de **0,24** definido no objetivo SMART. Por esse motivo, foram testados modelos candidatos e diferentes configurações.
 
-O modelo baseline foi o **K-Means com 3 clusters**.
+O modelo final escolhido foi um **Gaussian Mixture Model com 3 clusters**, usando a variante de dados `Numericas_Engenharia`. Este modelo obteve uma **Silhouette de 0,3947**, um **Davies-Bouldin Index de 0,9626** e um **Calinski-Harabasz Score de 7142,2309**. A solução final respeita o objetivo SMART, porque identifica exatamente **3 perfis de clientes** e supera o valor mínimo de Silhouette definido inicialmente.
 
-Resultado principal no dataset completo:
+Os três perfis identificados foram interpretados como:
 
-| Modelo           | Nº de clusters | Silhouette | Davies-Bouldin |
-| :--------------- | -------------: | ---------: | -------------: |
-| K-Means Baseline |              3 |     0,2161 |         1,6154 |
+* **Cluster 0:** clientes com baixo consumo e menor utilização de serviços;
+* **Cluster 1:** clientes antigos, com maior consumo e maior subscrição de serviços;
+* **Cluster 2:** clientes recentes com encargos mensais elevados.
 
-Este resultado ficou abaixo do valor mínimo definido no objetivo SMART, que era **0,24**. Por isso, foi necessário testar outros modelos e otimizar a solução.
-
-#### Otimização e Modelo Final
-
-Depois do baseline, foram testados vários modelos candidatos e diferentes representações dos dados.
-
-O melhor modelo global encontrado foi um **Gaussian Mixture Model com 2 clusters**, com Silhouette de **0,4377**. No entanto, este modelo não foi escolhido como solução final porque o objetivo SMART define a identificação de **3 perfis de clientes**.
-
-O modelo final selecionado foi:
-
-| Elemento          | Valor                  |
-| :---------------- | :--------------------- |
-| Modelo            | Gaussian Mixture Model |
-| Variante de dados | Numericas_Engenharia   |
-| Nº de clusters    | 3                      |
-| `covariance_type` | spherical              |
-| `n_init`          | 5                      |
-| `random_state`    | 42                     |
-| Silhouette        | 0,3947                 |
-| Davies-Bouldin    | 0,9626                 |
-| Calinski-Harabasz | 7142,2309              |
-| Cluster mínimo    | 29,62%                 |
-
-Este modelo cumpre o objetivo SMART, uma vez que:
-
-* identifica exatamente **3 perfis de clientes**;
-* apresenta Silhouette superior a **0,24**;
-* produz clusters com dimensão equilibrada;
-* permite caracterizar cada perfil através de várias variáveis relevantes;
-* melhora substancialmente o desempenho face ao K-Means baseline.
-
-A melhoria face ao limiar mínimo definido no objetivo foi:
-
-```text
-0,3947 - 0,24 = 0,1547
-```
-
-Ou seja, o modelo final ficou **0,1547 pontos acima** do mínimo definido.
-
-#### Perfis identificados
-
-| Cluster | Nº de clientes | Percentagem | Interpretação                                                      |
-| ------: | -------------: | ----------: | :----------------------------------------------------------------- |
-|       0 |           2086 |      29,62% | Clientes com baixo consumo e menor utilização de serviços          |
-|       1 |           2298 |      32,63% | Clientes antigos, com maior consumo e maior subscrição de serviços |
-|       2 |           2659 |      37,75% | Clientes recentes com encargos mensais elevados                    |
-
-#### Figuras principais da modelação
-
-As principais figuras da Milestone 3 encontram-se em `reports/figures/`.
-
-![Silhouette Plot do Modelo Final](reports/figures/m3_silhouette_plot_modelo_final.png)
-
-![Visualização PCA do Modelo Final](reports/figures/m3_pca_modelo_final.png)
-
-![Perfil dos Segmentos](reports/figures/m3_perfil_segmentos_variaveis_numericas.png)
+Assim, a modelação permitiu transformar os dados preparados na Milestone 2 em segmentos interpretáveis, capazes de apoiar decisões de gestão comercial e relacionamento com clientes.
 
 Mais detalhes estão disponíveis em [`docs/M3_modelacao.md`](docs/M3_modelacao.md).
 
@@ -186,13 +146,21 @@ Em linguagem simples, a métrica técnica principal significa que os dados apres
 
 ### Recomendações de Inovação
 
-1. Criar estratégias diferenciadas de comunicação para cada perfil de cliente identificado.
-2. Desenvolver ações de fidelização específicas para clientes antigos e de maior valor comercial.
-3. Acompanhar de forma mais próxima clientes recentes com encargos mensais elevados.
-4. Explorar oportunidades de venda cruzada para clientes com baixo número de serviços subscritos.
-5. Usar os segmentos como base para análises futuras, sem interpretar o modelo como previsão direta de churn.
-6. Desenvolver futuramente uma aplicação simples em Streamlit para atribuir novos clientes aos perfis identificados.
-7. Criar um dashboard em Power BI para facilitar a leitura dos segmentos por utilizadores não técnicos.
+1. Testar algoritmos adicionais de clustering, como HDBSCAN, OPTICS e abordagens hierárquicas, para verificar se é possível obter segmentos mais estáveis, interpretáveis e com melhor separação do que a solução atual com Gaussian Mixture Model;
+
+2. Comparar de forma mais aprofundada soluções com 2, 3 e 4 clusters, avaliando o equilíbrio entre Coeficiente de Silhueta, dimensão dos grupos, interpretabilidade dos perfis e utilidade prática para a gestão comercial;
+
+3. Integrar novas variáveis de negócio, como satisfação do cliente, número de reclamações, contactos com o apoio ao cliente, campanhas recebidas e alterações contratuais, para enriquecer a caracterização dos segmentos;
+
+4. Incorporar a dimensão temporal dos clientes, analisando a evolução mensal das mensalidades, serviços subscritos, tempo de permanência e alterações contratuais, de modo a perceber se os clientes mudam de perfil ao longo do tempo;
+
+5. Validar os perfis identificados com equipas de marketing, vendas ou apoio ao cliente, para confirmar se os segmentos fazem sentido do ponto de vista operacional e se as recomendações associadas são aplicáveis;
+
+6. Criar um dashboard em Power BI para apresentar a distribuição dos clusters, as principais características de cada perfil e as recomendações comerciais associadas, facilitando a interpretação por utilizadores não técnicos;
+
+7. Desenvolver uma interface Streamlit que permita carregar novos dados de clientes e atribuir automaticamente cada cliente a um dos perfis identificados, tornando a solução utilizável fora do notebook Kaggle;
+
+8. Explorar, numa fase futura separada, um modelo supervisionado de previsão de churn usando a variável `Churn` como alvo, permitindo comparar a utilidade de uma abordagem descritiva com uma abordagem preditiva.
 
 Mais detalhes estão disponíveis em [`docs/M4_conclusoes.md`](docs/M4_conclusoes.md).
 
