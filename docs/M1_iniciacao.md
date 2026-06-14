@@ -2,39 +2,46 @@
 
 ## 1. Descrição Detalhada do Problema
 
-O presente projeto utiliza o conjunto de dados **Telco Customer Churn**, disponível na plataforma Kaggle. Este conjunto de dados contém informação sobre clientes de uma empresa de telecomunicações, incluindo características demográficas, tipo de contrato, serviços subscritos, método de pagamento, antiguidade do cliente e valores pagos.
+### Contexto do Setor: Telecomunicações e Gestão de Clientes
 
-Embora o conjunto de dados esteja associado ao tema de abandono de clientes, o objetivo principal deste projeto não é construir um modelo de classificação supervisionada nem prever individualmente se um cliente abandona ou permanece no serviço. O foco do trabalho será a construção de um **modelo descritivo de segmentação de clientes**, isto é, um modelo de agrupamento que permita identificar perfis de clientes com características semelhantes.
+O setor das telecomunicações caracteriza-se por uma elevada diversidade de clientes, serviços e modelos contratuais. Numa mesma base de clientes podem coexistir utilizadores com perfis muito distintos: clientes com serviços básicos, clientes com vários serviços contratados, clientes recentes, clientes antigos, clientes com mensalidades reduzidas e clientes com encargos mensais mais elevados.
 
-A segmentação de clientes é relevante em contexto de gestão porque permite compreender melhor a composição da base de clientes. Em vez de tratar todos os clientes como um grupo homogéneo, a segmentação permite identificar perfis distintos de clientes com base em características demográficas, contratuais, de serviços subscritos e de consumo.
+Esta heterogeneidade torna a gestão comercial mais complexa. Se todos os clientes forem tratados da mesma forma, existe o risco de aplicar estratégias pouco adequadas a determinados grupos. Por exemplo, um cliente com poucos serviços contratados pode necessitar de uma abordagem diferente de um cliente antigo com elevado valor acumulado. Da mesma forma, clientes recentes com mensalidades elevadas podem beneficiar de um acompanhamento inicial mais próximo, de forma a reforçar a perceção de valor dos serviços contratados.
 
-Esta abordagem pode apoiar decisões de gestão comercial, comunicação, acompanhamento e relacionamento com clientes, uma vez que permite compreender que tipos de clientes existem no conjunto de dados e quais as características que distinguem cada perfil.
+Neste contexto, a Ciência de Dados pode apoiar a gestão de clientes ao permitir identificar padrões escondidos nos dados e transformar informação dispersa em conhecimento útil para a tomada de decisão. Em vez de analisar apenas indicadores isolados, como a mensalidade ou o tipo de contrato, é possível combinar várias dimensões dos clientes e identificar grupos com características semelhantes.
 
-Neste projeto, serão consideradas variáveis demográficas, contratuais, de serviços subscritos e de consumo. A variável `Churn` existe no conjunto de dados, mas não constitui o foco principal do projeto e não será utilizada como variável-alvo de classificação.
+### Relevância do Problema no Contexto Atual
 
-### Reflexão sobre a Orientação do Projeto
+A segmentação de clientes é relevante porque permite compreender melhor a estrutura da base de clientes e apoiar decisões comerciais mais direcionadas. Num contexto empresarial, conhecer os diferentes perfis existentes pode ajudar a adaptar estratégias de comunicação, fidelização, venda cruzada e acompanhamento comercial.
 
-A orientação deste projeto foi definida tendo em conta a necessidade de construir um trabalho mais consistente e reflexivo, e não apenas preencher os ficheiros exigidos no enunciado.
+O objetivo deste projeto não é prever individualmente se um cliente irá abandonar a empresa. Embora o dataset utilizado inclua a variável `Churn`, esta não será usada como variável-alvo de classificação. O foco do trabalho é descritivo: pretende-se identificar perfis de clientes e compreender como estes se distinguem entre si com base em variáveis demográficas, contratuais, de serviços subscritos e de consumo.
 
-Assim, o desenvolvimento do projeto deverá manter uma ligação direta ao objetivo SMART validado. A exploração dos dados deverá justificar por que motivo determinadas variáveis são relevantes para a segmentação. A preparação dos dados deverá explicar as decisões tomadas. A fase de modelação deverá ser avaliada não apenas por métricas, mas também pela capacidade de gerar perfis interpretáveis e úteis em contexto de gestão.
+Esta opção metodológica está alinhada com uma abordagem não supervisionada, em que o objetivo principal não é prever uma classe conhecida, mas sim descobrir estruturas e padrões existentes nos dados.
 
-Desta forma, pretende-se que o projeto demonstre uma evolução qualitativa ao longo das várias fases, com decisões justificadas e alinhadas com o objetivo principal.
+### Formulação do Problema no Contexto da Ciência de Dados
+
+Para analisar este problema, será utilizado o conjunto de dados **Telco Customer Churn**, disponibilizado na plataforma Kaggle. O dataset contém **7043 registos e 21 variáveis**, representando clientes de uma empresa de telecomunicações. As variáveis disponíveis incluem informação demográfica, características contratuais, serviços subscritos, métodos de pagamento e valores pagos pelos clientes.
+
+O problema será tratado como um problema de **aprendizagem não supervisionada**, mais especificamente de **clustering**. Esta abordagem permite agrupar clientes com características semelhantes, sem utilizar uma variável-alvo. Assim, em vez de construir um modelo preditivo de churn, o projeto procura identificar segmentos de clientes que possam ser descritos estatisticamente e interpretados em contexto de gestão.
+
+A variável `customerID` será considerada apenas como identificador e não deverá contribuir para a modelação. A variável `Churn`, apesar de existir no dataset, será excluída da construção dos clusters, para evitar transformar o projeto num problema supervisionado.
+
+A análise será conduzida de forma progressiva, seguindo a metodologia CRISP-DM: primeiro será feita a compreensão do problema e dos dados; depois a análise exploratória e preparação; em seguida a modelação com algoritmos de clustering; e, por fim, a interpretação dos segmentos encontrados e a tradução dos resultados em valor prático.
+
+### Objetivo Analítico do Projeto
+
+O objetivo analítico principal deste projeto consiste em construir um modelo descritivo de segmentação de clientes, capaz de identificar **3 perfis estatisticamente caracterizáveis** no dataset Telco Customer Churn.
+
+Para atingir esse objetivo, serão analisadas variáveis demográficas, contratuais, de serviços subscritos e de consumo, procurando perceber quais contribuem para diferenciar os clientes. A qualidade da segmentação será avaliada através do **Coeficiente de Silhueta**, com o objetivo mínimo de obter um valor médio igual ou superior a **0,24**.
+
+Além da métrica técnica, o projeto será avaliado pela capacidade de gerar perfis interpretáveis. Cada perfil deverá ser descrito com base em pelo menos cinco variáveis relevantes, permitindo transformar o resultado técnico em conhecimento útil para decisões de gestão comercial e relacionamento com clientes.
+
+Desta forma, o projeto procura demonstrar como técnicas de Ciência de Dados podem ser utilizadas não apenas para previsão, mas também para compreensão, segmentação e apoio à decisão em contexto de negócio.
+
 
 ## 2. Objetivo SMART
 
 Construir, até ao dia **14/06/2026**, um modelo descritivo de segmentação de clientes com base no conjunto de dados **Telco Customer Churn**, utilizando variáveis demográficas, contratuais, de serviços subscritos e de consumo, de modo a identificar **3 perfis de clientes estatisticamente caracterizáveis**, garantindo uma solução final com **Coeficiente de Silhueta médio igual ou superior a 0,24** e com cada perfil descrito através de pelo menos **cinco variáveis relevantes**, permitindo apoiar decisões de gestão comercial e relacionamento com clientes.
-
-### Critérios SMART
-
-* **Específico:** O objetivo centra-se na construção de um modelo descritivo de segmentação de clientes, utilizando o conjunto de dados **Telco Customer Churn**.
-
-* **Mensurável:** O objetivo define como resultado esperado a identificação de **3 perfis de clientes**, uma solução com **Coeficiente de Silhueta médio igual ou superior a 0,24** e a descrição de cada perfil através de pelo menos **cinco variáveis relevantes**.
-
-* **Atingível:** O conjunto de dados contém variáveis demográficas, contratuais, de serviços subscritos e de consumo suficientes para desenvolver uma análise de segmentação.
-
-* **Relevante:** A identificação de perfis de clientes pode apoiar decisões de gestão comercial e relacionamento com clientes.
-
-* **Temporal:** O objetivo deverá ser concretizado até ao dia **14/06/2026**.
 
 ### Perguntas de Investigação
 
@@ -143,4 +150,4 @@ Do ponto de vista ético, o dataset não contém nomes reais, moradas, contactos
 
 ---
 
-*Data de última atualização: 04/06/2026*
+*Data de última atualização: 14/06/2026*
