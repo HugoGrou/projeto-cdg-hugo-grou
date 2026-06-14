@@ -223,19 +223,6 @@ Depois da seleção, foram escalonadas as variáveis contínuas `tenure`, `Month
 
 A validação final do dataset processado confirmou que o dataset final tem **7043 linhas e 24 atributos**, não contém colunas não numéricas, não contém valores em falta, e não inclui `Churn` nem `customerID`.
 
-O ficheiro final foi guardado em:
-
-```text
-data/processed/telco_customer_churn_m2_final_processado.csv
-```
-
-Também foram guardados ficheiros auxiliares:
-
-```text
-data/processed/lista_atributos_finais_m2.csv
-data/processed/atributos_removidos_m2.csv
-```
-
 A seleção de atributos foi apoiada pela seguinte matriz de correlação:
 
 ![Heatmap de feature selection](../reports/figures/heatmap_feature_selection_correlacao.png)
