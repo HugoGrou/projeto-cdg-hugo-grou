@@ -12,13 +12,7 @@ O objetivo SMART definido na Milestone 1 foi:
 
 Com base nos resultados obtidos na fase de modelação, este objetivo foi alcançado. O modelo final identificou exatamente **3 perfis de clientes** e obteve um **Coeficiente de Silhueta de 0,3947**, valor superior ao mínimo definido inicialmente de **0,24**.
 
-A diferença face ao objetivo mínimo foi:
-
-```text
-0,3947 - 0,24 = 0,1547
-```
-
-Isto significa que o modelo final superou o critério mínimo de qualidade definido no início do projeto.
+A diferença face ao objetivo mínimo foi de 0,1547, isto significa que o modelo final superou o critério mínimo de qualidade definido no início do projeto.
 
 O modelo final escolhido foi um **Gaussian Mixture Model**, aplicado à variante de dados **Numéricas + Engenharia**, com **3 clusters**. Este modelo obteve:
 
